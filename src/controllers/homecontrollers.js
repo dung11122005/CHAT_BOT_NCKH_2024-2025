@@ -36,7 +36,7 @@ let postwebhook = (req, res) => {
 
 
 let getwebhook = (req, res) => {
-    let PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+    let VERYFY_TOKEN = process.env.VERYFY_TOKEN;
     // Parse the query params
     let mode = req.query["hub.mode"];
     let token = req.query["hub.verify_token"];
@@ -45,7 +45,7 @@ let getwebhook = (req, res) => {
     // Check if a token and mode is in the query string of the request
     if (mode && token) {
         // Check the mode and token sent is correct
-        if (mode === "subscribe" && token === PAGE_ACCESS_TOKEN) {
+        if (mode === "subscribe" && token === VERYFY_TOKEN) {
             // Respond with the challenge token from the request
             console.log("WEBHOOK_VERIFIED");
             res.status(200).send(challenge);
