@@ -1,4 +1,5 @@
 require('dotenv').config();
+import request from 'request';
 let gethomepage = (req, res) => {
     return res.render('homepage.ejs');
 };
