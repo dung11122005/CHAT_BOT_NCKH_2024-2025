@@ -37,8 +37,10 @@ let getusername = async (sender_psid) => {
     }, (err, res, body) => {
         console.log(body)
         if (!err) {
-            let response = JSON.parse(res)
-            console.log('message sent!')
+            let response = JSON.parse(res);
+            //             "first_name": "Peter",
+            //   "last_name": "Chang",
+            username = `${response.first_name}${response.last_name}`
         } else {
             console.error("Unable to send message:" + err);
         }
@@ -48,7 +50,8 @@ let getusername = async (sender_psid) => {
 let hendlegetstarted = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
-            let response = { "text": "XIN CHÀO CRUSH NHÉ, TỚ LÀ DŨNG RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU" }
+            let username = await getusername(sender_psid);
+            let response = { "text": `XIN CHÀO ${username} NHÉ, TỚ LÀ DŨNG RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU` }
             await callSendAPI(sender_psid, response)
             resolve('done')
         } catch (e) {
