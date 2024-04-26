@@ -155,7 +155,7 @@ let setupprofile = (req, res) => {
     // Construct the message body
 
     let request_body = {
-        "get-started": { "payload": "GET-STARTED" },
+        "get_started": { "payload": "GET_STARTED" },
         "whitelisted_domains": ["https://chat-bot-g69l.onrender.com/"]
     }
     // Send the HTTP request to the Messenger Platform
