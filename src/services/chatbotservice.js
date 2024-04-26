@@ -32,8 +32,8 @@ let getusername = (sender_psid) => {
         // Send the HTTP request to the Messenger Platform
         request({
             "uri": `https://graph.facebook.com/${sender_psid}?fields=first_name,last_name,profile_pic&access_token=${PAGE_ACCESS_TOKEN}`,
-            // "qs": { "access_token": PAGE_ACCESS_TOKEN },
-            // "method": "GET",
+            "qs": { "access_token": PAGE_ACCESS_TOKEN },
+            "method": "GET",
             "json": request_body
         }, (err, res, body) => {
             if (!err) {
