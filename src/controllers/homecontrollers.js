@@ -120,6 +120,8 @@ function handlePostback(sender_psid, received_postback) {
         response = { "text": "Thanks!" }
     } else if (payload === 'no') {
         response = { "text": "Oops, try sending another image." }
+    } else {
+        response = { "text": "XIN CHÀO CRUSH NHÉ, TỚ LÀ DŨNG RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU" }
     }
     // Send the message to acknowledge the postback
     callSendAPI(sender_psid, response);
@@ -150,7 +152,7 @@ function callSendAPI(sender_psid, response) {
     });
 }
 
-let setupprofile = (req, res) => {
+let setupprofile = async (req, res) => {
     //call profile facebook API
     // Construct the message body
 
@@ -159,7 +161,7 @@ let setupprofile = (req, res) => {
         "whitelisted_domains": ["https://chat-bot-g69l.onrender.com/"]
     }
     // Send the HTTP request to the Messenger Platform
-    request({
+    await request({
         "uri": `https://graph.facebook.com/v19.0/me/messenger_profile?access_token=${PAGE_ACCESS_TOKEN}`,
         "qs": { "access_token": PAGE_ACCESS_TOKEN },
         "method": "POST",
@@ -172,6 +174,7 @@ let setupprofile = (req, res) => {
             console.error("Unable to setup user profile:" + err);
         }
     });
+    return res.send("setup user profile succesds")
 }
 
 module.exports = {
