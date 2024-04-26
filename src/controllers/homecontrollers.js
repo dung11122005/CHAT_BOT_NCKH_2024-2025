@@ -126,7 +126,7 @@ async function handlePostback(sender_psid, received_postback) {
             break;
         case 'GET_STARTED':
             await chatbotservice.hendlegetstarted(sender_psid);
-            response = { "text": "XIN CHÀO CRUSH NHÉ, TỚ LÀ DŨNG RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU" }
+        // response = { "text": "XIN CHÀO CRUSH NHÉ, TỚ LÀ DŨNG RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU" }
         default:
             response = { "text": `oop! i don't know respose with postback ${payload}` }
     }

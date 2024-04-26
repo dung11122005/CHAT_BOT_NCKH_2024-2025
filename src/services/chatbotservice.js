@@ -28,15 +28,14 @@ let callSendAPI = (sender_psid, response) => {
 
 let getusername = (sender_psid) => {
     return new Promise((resolve, reject) => {
-        let username = '';
         // Send the HTTP request to the Messenger Platform
         request({
-            "uri": `https://graph.facebook.com/${sender_psid}?fields=first_name,last_name,profile_pic&access_token=${PAGE_ACCESS_TOKEN}`,
-            "method": "GET",
+            "uri": `https://graph.facebook.com/${sender_psid}?fields=first_name,last_name,profile_pic&access_token=${PAGE_ACCESS_TOKEN} `,
+            "method": "GET"
         }, (err, res, body) => {
             if (!err) {
                 body = JSON.parse(body);
-                username = `${body.first_name} ${body.last_name}`
+                let username = `${body.first_name} ${body.last_name}`
                 resolve(username)
             } else {
                 console.error("Unable to send message:" + err);
