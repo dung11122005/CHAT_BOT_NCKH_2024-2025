@@ -125,18 +125,12 @@ async function handlePostback(sender_psid, received_postback) {
             response = { "text": "Oops, try sending another image." }
             break;
         case 'GET_STARTED':
+            await chatbotservice.hendlegetstarted(sender_psid);
             response = { "text": "XIN CHÀO CRUSH NHÉ, TỚ LÀ DŨNG RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU" }
         default:
             response = { "text": `oop! i don't know respose with postback ${payload}` }
     }
-    if (payload === 'yes') {
-        response = { "text": "Thanks!" }
-    } else if (payload === 'no') {
-        await chatbotservice.hendlegetstarted(sender_psid);
-        response = { "text": "Oops, try sending another image." }
-    } else if (payload === 'GET_STARTED') {
-        response = { "text": "XIN CHÀO CRUSH NHÉ, TỚ LÀ DŨNG RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU" }
-    }
+
     // Send the message to acknowledge the postback
     // callSendAPI(sender_psid, response);
 }

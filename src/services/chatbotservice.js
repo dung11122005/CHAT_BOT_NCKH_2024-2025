@@ -27,11 +27,11 @@ let callSendAPI = (sender_psid, response) => {
 let hendlegetstarted = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
-            let response = { "text": "Oops, try sending another image." }
+            let response = { "text": "XIN CHÀO CRUSH NHÉ, TỚ LÀ DŨNG RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU" }
             await callSendAPI(sender_psid, response)
             resolve('done')
         } catch (e) {
-
+            reject(e)
         }
     })
 }
