@@ -71,39 +71,28 @@ let sendgetstartedtemplate = () => {
             "type": "template",
             "payload": {
                 "template_type": "generic",
-                "elements": [
-                    {
-                        "title": "XIN CHÀO BẠN ĐẾN VỚI NHÀ HÀNG CỦA DŨNG!",
-                        "image_url": IMAGE_GET_STARTED,
-                        "subtitle": "DƯỚI ĐÂY LÀ ACCS LỰA CHỌN CỦA NHÀ HÀNG",
-                        "default_action": {
-                            "type": "web_url",
-                            "url": "https://petersfancybrownhats.com/view?item=103",
-                            "messenger_extensions": false,
-                            "webview_height_ratio": "tall",
-                            "fallback_url": "https://petersfancybrownhats.com/"
+                "elements": [{
+                    "title": "XIN CHÀO BẠN ĐÉN VỚI NHÀ HÀNG CỦA DŨNG",
+                    "subtitle": "DƯỚI ĐÂY LÀ MỘT SỐ TÙY CHỌN CỦA NHÀ HÀNG",
+                    "image_url": IMAGE_GET_STARTED,
+                    "buttons": [
+                        {
+                            "type": "postback",
+                            "title": "MENU_CHÍNH",
+                            "payload": "MAIN_MENU",
                         },
-                        "buttons": [
-                            {
-                                "type": "web_url",
-                                "url": "https://petersfancybrownhats.com",
-                                "title": "View Website"
-                            }, {
-                                "type": "postback",
-                                "title": "MENU CHÍNH",
-                                "payload": "MAIN_MENU"
-                            }, {
-                                "type": "postback",
-                                "title": "ĐẶT BÀN",
-                                "payload": "RESERVE_TABLE"
-                            }, {
-                                "type": "postback",
-                                "title": "HƯỚNG DẪN SỬ DỤNG CHAT",
-                                "payload": "GUIDE_TO_USE"
-                            }
-                        ]
-                    }
-                ]
+                        {
+                            "type": "postback",
+                            "title": "ĐẶT BÀN",
+                            "payload": "RESERVE_TABLE",
+                        },
+                        {
+                            "type": "postback",
+                            "title": "CÁCH SỬ DỤNG BOT",
+                            "payload": "GUIDE_TO_USE",
+                        }
+                    ],
+                }]
             }
         }
     }
