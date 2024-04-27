@@ -185,9 +185,58 @@ let setupprofile = async (req, res) => {
     return res.send("setup user profile succesds")
 }
 
+let setuppersistentmenu = async (req, res) => {
+    //call profile facebook API
+    // Construct the message body
+
+    let request_body = {
+        "persistent_menu": [
+            {
+                "locale": "default",
+                "composer_input_disabled": false,
+                "call_to_actions": [
+                    {
+                        "type": "web_url",
+                        "title": "YOUTOBE CHANNEL CỦA MÌNH",
+                        "url": "https://www.youtube.com/channel/UC0nXI6o5oM9yFGLd_JP_r9A",
+                        "webview_height_ratio": "full"
+                    },
+                    {
+                        "type": "web_url",
+                        "title": "FACEBOOL CỦA MÌNH",
+                        "url": "https://www.facebook.com/cotem.khong.90?locale=vi_VN",
+                        "webview_height_ratio": "full"
+                    },
+                    {
+                        "type": "postback",
+                        "title": "KHỞI ĐỘNG LẠI BOT",
+                        "payload": "RESTART_BOT"
+                    }
+                ]
+            }
+        ]
+    }
+    // Send the HTTP request to the Messenger Platform
+    await request({
+        "uri": `https://graph.facebook.com/v19.0/me/messenger_profile?access_token=${PAGE_ACCESS_TOKEN}`,
+        "qs": { "access_token": PAGE_ACCESS_TOKEN },
+        "method": "POST",
+        "json": request_body
+    }, (err, res, body) => {
+        console.log(body)
+        if (!err) {
+            console.log('setup persistent menu succesds')
+        } else {
+            console.error("Unable to setup user profile:" + err);
+        }
+    });
+    return res.send("setup persistent menu succesds")
+}
+
 module.exports = {
     gethomepage: gethomepage,
     postwebhook: postwebhook,
     getwebhook: getwebhook,
-    setupprofile: setupprofile
+    setupprofile: setupprofile,
+    setuppersistentmenu: setuppersistentmenu
 }
