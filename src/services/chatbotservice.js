@@ -46,6 +46,9 @@ let getusername = (sender_psid) => {
     })
 
 }
+
+
+
 let hendlegetstarted = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -64,7 +67,6 @@ let hendlegetstarted = (sender_psid) => {
         }
     })
 }
-
 let getstartedtemplate = () => {
     let response = {
         "attachment": {
@@ -100,6 +102,7 @@ let getstartedtemplate = () => {
 }
 
 
+
 let hendlesendmainmenu = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -113,7 +116,6 @@ let hendlesendmainmenu = (sender_psid) => {
         }
     })
 }
-
 let getmainmenutemplate = () => {
     let response = {
         "attachment": {
@@ -166,7 +168,105 @@ let getmainmenutemplate = () => {
     }
     return response
 }
+
+
+
+let hendlegetlunchmenu = (sender_psid) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let response1 = getlunchmenutemplate();
+            // send teck masseges
+            await callSendAPI(sender_psid, response1)
+
+            resolve('done')
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
+let getlunchmenutemplate = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [
+                    {
+                        "title": "MÓN KHAI VỊ",
+                        "subtitle": "NHÀ HÀNG CHÚNG TÔI CÓ RẤT NHIỀU MÓN KHAI VỊ HẤP DẪN",
+                        "image_url": 'https://cdn.tgdd.vn/Files/2022/04/04/1423782/goi-y-8-mon-nguoi-khai-vi-cho-nhung-buoi-tiec-hoi-hop-voi-gia-dinh-202204040912057499.jpg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "XEM CHI TIẾT",
+                                "payload": "APPETIZER_MENU",
+                            }
+                        ],
+                    }, {
+                        "title": "MÓN CHÍNH",
+                        "subtitle": "NHÀ HÀNG CHÚNG TÔI CÓ RẤT NHIỀU MÓN ĂN, ĐẶC SẢN TỪNG VÙNG MIỀN",
+                        "image_url": 'https://haithuycatering.com/image/5c16265d51046d5028912183/original.jpg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "XEM CHI TIẾT",
+                                "payload": "MAIN_DISHIS_MENU",
+                            }
+                        ],
+                    }, {
+                        "title": "MÓN TRÁNG MIỆNG",
+                        "subtitle": "MÓN TRÁNG MIỆNG CỦA NHÀ HÀNG CHÚNG TÔI SẼ LÀM CHO QUÝ KHÁCH HÀI LÒNG",
+                        "image_url": 'https://suckhoedoisong.qltns.mediacdn.vn/Images/phamhiep/2016/08/09/1_11.jpg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "XEM CHI TIẾT",
+                                "payload": "DESSERTS_MENU",
+                            }
+                        ],
+                    }, {
+                        "title": "ĐỒ UỐNG",
+                        "subtitle": "THỨC UỐNG CỦA NHÀ HÀNG CHÚNG TÔI RẤT PHONG PHÚ VÀ NGON MIỆNG",
+                        "image_url": 'https://vus.edu.vn/wp-content/uploads/2023/12/do-uong-tieng-anh.jpg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "XEM CHI TIẾT",
+                                "payload": "DRINKS_MENU",
+                            }
+                        ],
+                    }
+                ]
+            }
+        }
+    }
+    return response
+}
+
+
+
+let hendlegetdinnermenu = (sender_psid) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let response1 = getdinnermenutemplate();
+            // send teck masseges
+            await callSendAPI(sender_psid, response1)
+
+            resolve('done')
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
+let getdinnermenutemplate = () => {
+
+}
+
+
+
 module.exports = {
     hendlegetstarted: hendlegetstarted,
-    hendlesendmainmenu: hendlesendmainmenu
+    hendlesendmainmenu: hendlesendmainmenu,
+    hendlegetlunchmenu: hendlegetlunchmenu,
+    hendlegetdinnermenu: hendlegetdinnermenu
 }
