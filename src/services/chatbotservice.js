@@ -124,7 +124,7 @@ let getmainmenutemplate = () => {
                     {
                         "title": "MENU CỦA NHÀ HÀNG",
                         "subtitle": "CHÚNG TÔI HÂN HẠNH MANG ĐẾN CHO BẠN MỘT BỮA ĂN THẬT NGON MIỆNG",
-                        "image_url": IMAGE_GET_STARTED,
+                        "image_url": 'https://www.hoteljob.vn/files/marketing-nha-hang-nhung-y-tuong-doc-dao-hieu-qua-tonglago.com1.jpg',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -140,7 +140,7 @@ let getmainmenutemplate = () => {
                     }, {
                         "title": "GIỜ MỞ CỬA",
                         "subtitle": "T2-T6 10AM - 11PM | T7 5PM - 10PM | CN 5PM - 10PM",
-                        "image_url": IMAGE_GET_STARTED,
+                        "image_url": 'https://www.hoteljob.vn/files/Anh-HTJ-Hong/van-hoa-am-thuc-phuong-tay-7.jpg',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -151,7 +151,7 @@ let getmainmenutemplate = () => {
                     }, {
                         "title": "KHÔNG GIAN NHÀ HÀNG",
                         "subtitle": "NHÀ HÀNG CÓ SỨC CHỨA LÊN TỚI 500 KHÁCH NGỒI VÀ TƯƠNG TỰ TIỆC ĐÁM CƯỚI",
-                        "image_url": IMAGE_GET_STARTED,
+                        "image_url": 'https://www.hoteljob.vn/files/Anh-HTJ-Hong/van-hoa-an-buffet-5.jpg',
                         "buttons": [
                             {
                                 "type": "postback",
