@@ -309,6 +309,17 @@ let getdinnermenutemplate = () => {
                                 "payload": "DRINKS_MENU",
                             }
                         ],
+                    }, {
+                        "title": "ĐÊM ÂM NHẠC",
+                        "subtitle": "ÂM NHẠC LÀ LIỀU THUỐC CHỮA LÀNH MỌI VẾT THƯƠNG",
+                        "image_url": 'https://bazaarvietnam.vn/wp-content/uploads/2022/06/Harpers-Bazaar-san-khau-ca-nhac-ta%CC%A3i-Da-Lat_LULULOLA_03-scaled.jpg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "XEM CHI TIẾT",
+                                "payload": "MUSIC_MENU",
+                            }
+                        ],
                     }
                 ]
             }
