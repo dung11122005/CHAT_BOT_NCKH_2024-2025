@@ -127,7 +127,9 @@ async function handlePostback(sender_psid, received_postback) {
         case 'RESTART_BOT':
         case 'GET_STARTED':
             await chatbotservice.hendlegetstarted(sender_psid);
-            // response = { "text": "XIN CHÀO CRUSH NHÉ, TỚ LÀ DŨNG RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU" }
+            break;
+        case 'MAIN_MENU':
+            await chatbotservice.hendlesendmainmenu(sender_psid);
             break;
         default:
             response = { "text": `oop! i don't know respose with postback ${payload}` }
