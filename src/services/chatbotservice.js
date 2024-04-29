@@ -235,6 +235,17 @@ let getlunchmenutemplate = () => {
                                 "payload": "DRINKS_MENU",
                             }
                         ],
+                    }, {
+                        "title": "QUAY TRỞ LẠI",
+                        "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
+                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "QUAY LẠI",
+                                "payload": "BACK_TO_MAIN_MENU",
+                            }
+                        ],
                     }
                 ]
             }
