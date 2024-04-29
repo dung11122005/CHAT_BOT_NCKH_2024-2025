@@ -151,6 +151,9 @@ async function handlePostback(sender_psid, received_postback) {
         case 'DRINKS_MENU':
             await chatbotservice.hendledetailviewdrinks(sender_psid);
             break;
+        case 'MUSIC_MENU':
+            await chatbotservice.hendledetailviewmusic(sender_psid);
+            break;
         default:
             response = { "text": `oop! i don't know respose with postback ${payload}` }
     }

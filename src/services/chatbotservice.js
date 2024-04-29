@@ -177,6 +177,7 @@ let getmainmenutemplate = () => {
 
 
 
+
 let hendlegetlunchmenu = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -259,6 +260,8 @@ let getlunchmenutemplate = () => {
     }
     return response
 }
+
+
 
 
 
@@ -428,6 +431,8 @@ let getditailviewappetizertemplate = () => {
 
 
 
+
+
 let hendledetailviewdishis = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -564,10 +569,11 @@ let getditailviewdessertstemplate = () => {
 
 
 
+
 let hendledetailviewdrinks = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
-            let response1 = getditailviewdrinkstemplate();
+            let response1 = getditailviewmusictemplate();
             // send teck masseges
             await callSendAPI(sender_psid, response1)
 
@@ -576,6 +582,43 @@ let hendledetailviewdrinks = (sender_psid) => {
             reject(e)
         }
     })
+}
+let getditailviewmusictemplate = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [
+                    {
+                        "title": "ÂM NHẠC",
+                        "subtitle": "T2 - T6 từ 7PM30 - 10PM, T7 từ 8PM - 11PM, CN từ 7PM - 11PM",
+                        "image_url": 'https://bizweb.dktcdn.net/100/127/787/files/295575282-502817108186499-3820513038597196827-n.jpg?v=1670473477126',
+
+                    }, {
+                        "title": "QUAY TRỞ LẠI",
+                        "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
+                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "QUAY LẠI",
+                                "payload": "BACK_TO_MAIN_MENU",
+                            }
+                        ],
+                    }
+                ]
+            }
+        }
+    }
+    return response
+}
+
+
+
+
+let hendledetailviewmusic = (sender_psid) => {
+
 }
 let getditailviewdrinkstemplate = () => {
     let response = {
@@ -626,6 +669,8 @@ let getditailviewdrinkstemplate = () => {
 
 
 
+
+
 module.exports = {
     hendlegetstarted: hendlegetstarted,
     hendlesendmainmenu: hendlesendmainmenu,
@@ -634,5 +679,6 @@ module.exports = {
     hendledetailviewappetizer: hendledetailviewappetizer,
     hendledetailviewdishis: hendledetailviewdishis,
     hendledetailviewdesserts: hendledetailviewdesserts,
-    hendledetailviewdrinks: hendledetailviewdrinks
+    hendledetailviewdrinks: hendledetailviewdrinks,
+    hendledetailviewmusic: hendledetailviewmusic
 }
