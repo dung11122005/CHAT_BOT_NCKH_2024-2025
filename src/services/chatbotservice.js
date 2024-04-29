@@ -331,6 +331,82 @@ let getdinnermenutemplate = () => {
                                 "payload": "MUSIC_MENU",
                             }
                         ],
+                    }, {
+                        "title": "QUAY TRỞ LẠI",
+                        "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
+                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "QUAY LẠI",
+                                "payload": "BACK_TO_MAIN_MENU",
+                            }
+                        ],
+                    }
+                ]
+            }
+        }
+    }
+    return response
+}
+
+
+let hendledetailviewappetizer = () => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let response1 = getditailviewappetizertemplate();
+            // send teck masseges
+            await callSendAPI(sender_psid, response1)
+
+            resolve('done')
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
+let getditailviewappetizertemplate = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [
+                    {
+                        "title": "SÒ HUYẾT TỨ XUYÊN",
+                        "subtitle": "Sò huyết sốt Tứ Xuyên là món ăn khá nổi tiếng và được ưa chuộng bởi hương vị thơm ngon, đậm đà và cay nồng đặc trưng của ẩm thực Tứ Xuyên",
+                        "image_url": 'https://beptruong.edu.vn/wp-content/uploads/2016/01/mon-so-huyet-sot-tu-xuyen.jpg',
+
+                    }, {
+                        "title": "GỎI NGÓ XEN",
+                        "subtitle": "Gỏi ngó sen tôm thịt là món ăn thanh mát, giòn ngon, thích hợp để giải ngán trong những ngày hè nóng bức",
+                        "image_url": 'https://www.unileverfoodsolutions.com.vn/dam/global-ufs/mcos/phvn/vietnam/calcmenu/recipes/VN-recipes/vegetables-&-vegetable-dishes/g%E1%BB%8Fi-ng%C3%B3-sen-t%C3%B4m-th%E1%BB%8Bt/Goi-Ngo-Sen_Web.jpg',
+
+                    }, {
+                        "title": "GỎI CỦ HỦ DỪA",
+                        "subtitle": "Gỏi củ hủ dừa là món ăn thanh mát, giòn ngon, thích hợp cho những ngày hè nóng bức",
+                        "image_url": 'https://amthuc10phut.vn/wp-content/uploads/2022/11/goi-cu-hu-dua-tom-thit.jpg',
+
+                    }, {
+                        "title": "CÀNG CUA BÁCH HOA",
+                        "subtitle": "Món ăn này có hương vị thơm ngon, hấp dẫn và cách bày trí bắt mắt, mang đến sự sang trọng cho mâm cỗ",
+                        "image_url": 'https://monngonmoingay.com/wp-content/uploads/2015/08/IMG-4078-cang-cua-bach-hoa.png',
+
+                    }, {
+                        "title": "SƯỜN KINH ĐÔ",
+                        "subtitle": "Sườn Kinh Đô là món ăn độc đáo với hương vị thơm ngon, đậm đà, mang đậm dấu ấn của ẩm thực Trung Hoa",
+                        "image_url": 'https://haithuycatering.com/image/5c14717b51046d1d87e6fc36/thumbnail.jpg',
+
+                    }, {
+                        "title": "QUAY TRỞ LẠI",
+                        "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
+                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "QUAY LẠI",
+                                "payload": "BACK_TO_MAIN_MENU",
+                            }
+                        ],
                     }
                 ]
             }
@@ -341,9 +417,212 @@ let getdinnermenutemplate = () => {
 
 
 
+
+let hendledetailviewdishis = () => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let response1 = getditailviewdishistemplate();
+            // send teck masseges
+            await callSendAPI(sender_psid, response1)
+
+            resolve('done')
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
+let getditailviewdishistemplate = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [
+                    {
+                        "title": "CÁ LÓC HẤP BẦU",
+                        "subtitle": "Cá lóc hấp bầu là món ăn dân dã, thanh mát, bổ dưỡng và được nhiều người yêu thích",
+                        "image_url": 'https://pastaxi-manager.onepas.vn/content/uploads/articles/huanphan/quan-an-ngon/ca-loc-hap-bau-quan-an-ngon-1.jpg',
+
+                    }, {
+                        "title": "TÔM NƯỚNG PHOMAI",
+                        "subtitle": "Tôm nướng phô mai là món ăn thơm ngon, béo ngậy, hấp dẫn được nhiều người yêu thích",
+                        "image_url": 'https://i-giadinh.vnecdn.net/2022/12/24/Buoc-6-Thanh-pham-6-3320-1671873498.jpg',
+
+                    }, {
+                        "title": "HEO RỪNG 7 MÓN",
+                        "subtitle": "Heo rừng là thực phẩm quý hiếm, được nhiều người yêu thích bởi hương vị thơm ngon, bổ dưỡng",
+                        "image_url": 'https://vietpho.com.vn/public/uploads/files/Tin%20Tuc/z4285777440778_d6fb69b018eb0649da2ca45f8f1a1d90.jpg',
+
+                    }, {
+                        "title": "GÀ NƯỚNG LU",
+                        "subtitle": "Món ăn này được chế biến bằng cách nướng gà nguyên con trong lu đất, tạo nên hương vị đặc trưng",
+                        "image_url": 'https://chumrestaurant.com/wp-content/uploads/2021/11/Ga-nuong-lu-500x500-1.jpg',
+
+                    }, {
+                        "title": "LẨU CUA ĐỒNG",
+                        "subtitle": "Lẩu cua đồng là món ăn dân dã, quen thuộc trong mâm cơm của người Việt Nam, đặc biệt là vào những ngày se lạnh",
+                        "image_url": 'https://gasbanmai.com/wp-content/uploads/2023/05/lau-cua-dong.jpg',
+
+                    }, {
+                        "title": "QUAY TRỞ LẠI",
+                        "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
+                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "QUAY LẠI",
+                                "payload": "BACK_TO_MAIN_MENU",
+                            }
+                        ],
+                    }
+                ]
+            }
+        }
+    }
+    return response
+}
+
+
+
+
+
+
+let hendledetailviewdesserts = () => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let response1 = getditailviewdessertstemplate();
+            // send teck masseges
+            await callSendAPI(sender_psid, response1)
+
+            resolve('done')
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
+let getditailviewdessertstemplate = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [
+                    {
+                        "title": "CHÈ VẢI HẠT SEN",
+                        "subtitle": "Chè vải hạt sen là món chè thanh mát, thơm ngon, bổ dưỡng được nhiều người yêu thích, đặc biệt là vào những ngày hè nóng bức",
+                        "image_url": 'https://cdn.tgdd.vn/Files/2017/05/29/987245/cach-nau-che-vai-hat-sen-an-la-phai-khen-1-760x367.jpg',
+
+                    }, {
+                        "title": "BÁNH DA LỢN",
+                        "subtitle": "Bánh da lợn là món bánh dân dã, quen thuộc với nhiều người Việt Nam. Món bánh này có hương vị thơm ngon, béo ngậy",
+                        "image_url": 'https://thamhiemmekong.com/wp-content/uploads/2019/10/banh-da-lon-2.jpg',
+
+                    }, {
+                        "title": "BÁNH CHUỐI",
+                        "subtitle": "Heo rừng là thực phẩm quý hiếm, được nhiều người yêu thích bởi hương vị thơm ngon, bổ dưỡng",
+                        "image_url": 'https://vcdn-giadinh.vnecdn.net/2021/11/30/240528902-2582695311876336-658-5315-8703-1638235172.jpg',
+
+                    }, {
+                        "title": "BÁNH NGỌT",
+                        "subtitle": "Bánh ngọt là món tráng miệng phổ biến nhất trong nhà hàng",
+                        "image_url": 'https://vcdn1-dulich.vnecdn.net/2016/08/23/banhngon2-1471922491.jpg?w=460&h=0&q=100&dpr=2&fit=crop&s=JLN0JUIPBwClQeiatvJWQQ',
+
+                    }, {
+                        "title": "KEM",
+                        "subtitle": "Kem là một món tráng miệng lạnh, ngọt ngào",
+                        "image_url": 'https://cdn.tgdd.vn/2022/10/CookDishThumb/cach-trang-tri-kem-ly-kem-vien-xinh-xan-va-dep-mat-thumb-620x620.jpg',
+
+                    }, {
+                        "title": "QUAY TRỞ LẠI",
+                        "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
+                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "QUAY LẠI",
+                                "payload": "BACK_TO_MAIN_MENU",
+                            }
+                        ],
+                    }
+                ]
+            }
+        }
+    }
+    return response
+}
+
+
+
+
+let hendledetailviewdrinks = () => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let response1 = getditailviewdrinkstemplate();
+            // send teck masseges
+            await callSendAPI(sender_psid, response1)
+
+            resolve('done')
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
+let getditailviewdrinkstemplate = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [
+                    {
+                        "title": "NƯỚC TRÁI CÂY",
+                        "subtitle": "Nước trái cây là nguồn cung cấp vitamin, khoáng chất và chất chống oxy hóa dồi dào",
+                        "image_url": 'https://data-service.pharmacity.io/pmc-upload-media/production/pmc-ecm-asm/posts/uong-nuoc-ep-1.webp',
+
+                    }, {
+                        "title": "BIA",
+                        "subtitle": "Bia là một thức uống phổ biến trên toàn thế giới và được ưa chuộng bởi hương vị thơm ngon, sảng khoái",
+                        "image_url": 'https://media.baoquangninh.vn/upload/image/202403/medium/2188102_b90cef472719fd947dd8a9c1c43e5917.jpg',
+
+                    }, {
+                        "title": "RƯỢU",
+                        "subtitle": "Rượu là một loại đồ uống có cồn được sản xuất từ quá trình lên men tinh bột, đường hoặc trái cây",
+                        "image_url": 'https://www.hoteljob.vn/files/Anh-Hoteljob-Ni/Nam-2019/Thang-6/Bo-sung-3/huong-dan-cach-gioi-thieu-ruou-vang-danh-cho-nhan-vien-nha-hang-02.jpg',
+
+                    }, {
+                        "title": "COCA COLA",
+                        "subtitle": "Coca-Cola là một loại nước ngọt có ga nổi tiếng với lịch sử lâu đời",
+                        "image_url": 'https://pos.nvncdn.com/d5d413-108013/ps/20230228_XddB8N1HrvD8pzEU.jpeg',
+
+                    }, {
+                        "title": "QUAY TRỞ LẠI",
+                        "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
+                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "QUAY LẠI",
+                                "payload": "BACK_TO_MAIN_MENU",
+                            }
+                        ],
+                    }
+                ]
+            }
+        }
+    }
+    return response
+}
+
+
+
+
 module.exports = {
     hendlegetstarted: hendlegetstarted,
     hendlesendmainmenu: hendlesendmainmenu,
     hendlegetlunchmenu: hendlegetlunchmenu,
-    hendlegetdinnermenu: hendlegetdinnermenu
+    hendlegetdinnermenu: hendlegetdinnermenu,
+    hendledetailviewappetizer: hendledetailviewappetizer,
+    hendledetailviewdishis: hendledetailviewdishis,
+    hendledetailviewdesserts: hendledetailviewdesserts,
+    hendledetailviewdrinks: hendledetailviewdrinks
 }
