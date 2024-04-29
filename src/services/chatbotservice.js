@@ -49,6 +49,8 @@ let getusername = (sender_psid) => {
 
 
 
+
+
 let hendlegetstarted = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -100,6 +102,8 @@ let getstartedtemplate = () => {
     }
     return response
 }
+
+
 
 
 
@@ -168,6 +172,8 @@ let getmainmenutemplate = () => {
     }
     return response
 }
+
+
 
 
 
@@ -253,6 +259,7 @@ let getlunchmenutemplate = () => {
     }
     return response
 }
+
 
 
 
@@ -351,7 +358,10 @@ let getdinnermenutemplate = () => {
 }
 
 
-let hendledetailviewappetizer = () => {
+
+
+
+let hendledetailviewappetizer = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
             let response1 = getditailviewappetizertemplate();
@@ -418,7 +428,7 @@ let getditailviewappetizertemplate = () => {
 
 
 
-let hendledetailviewdishis = () => {
+let hendledetailviewdishis = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
             let response1 = getditailviewdishistemplate();
@@ -487,7 +497,7 @@ let getditailviewdishistemplate = () => {
 
 
 
-let hendledetailviewdesserts = () => {
+let hendledetailviewdesserts = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
             let response1 = getditailviewdessertstemplate();
@@ -554,7 +564,7 @@ let getditailviewdessertstemplate = () => {
 
 
 
-let hendledetailviewdrinks = () => {
+let hendledetailviewdrinks = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
             let response1 = getditailviewdrinkstemplate();
