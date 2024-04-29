@@ -573,7 +573,7 @@ let getditailviewdessertstemplate = () => {
 let hendledetailviewdrinks = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
-            let response1 = getditailviewmusictemplate();
+            let response1 = getditailviewdrinkstemplate();
             // send teck masseges
             await callSendAPI(sender_psid, response1)
 
@@ -583,43 +583,7 @@ let hendledetailviewdrinks = (sender_psid) => {
         }
     })
 }
-let getditailviewmusictemplate = () => {
-    let response = {
-        "attachment": {
-            "type": "template",
-            "payload": {
-                "template_type": "generic",
-                "elements": [
-                    {
-                        "title": "ÂM NHẠC",
-                        "subtitle": "T2 - T6 từ 7PM30 - 10PM, T7 từ 8PM - 11PM, CN từ 7PM - 11PM",
-                        "image_url": 'https://bizweb.dktcdn.net/100/127/787/files/295575282-502817108186499-3820513038597196827-n.jpg?v=1670473477126',
 
-                    }, {
-                        "title": "QUAY TRỞ LẠI",
-                        "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
-                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
-                        "buttons": [
-                            {
-                                "type": "postback",
-                                "title": "QUAY LẠI",
-                                "payload": "BACK_TO_MAIN_MENU",
-                            }
-                        ],
-                    }
-                ]
-            }
-        }
-    }
-    return response
-}
-
-
-
-
-let hendledetailviewmusic = (sender_psid) => {
-
-}
 let getditailviewdrinkstemplate = () => {
     let response = {
         "attachment": {
@@ -646,6 +610,52 @@ let getditailviewdrinkstemplate = () => {
                         "title": "COCA COLA",
                         "subtitle": "Coca-Cola là một loại nước ngọt có ga nổi tiếng với lịch sử lâu đời",
                         "image_url": 'https://pos.nvncdn.com/d5d413-108013/ps/20230228_XddB8N1HrvD8pzEU.jpeg',
+
+                    }, {
+                        "title": "QUAY TRỞ LẠI",
+                        "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
+                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "QUAY LẠI",
+                                "payload": "BACK_TO_MAIN_MENU",
+                            }
+                        ],
+                    }
+                ]
+            }
+        }
+    }
+    return response
+}
+
+
+
+let hendledetailviewmusic = (sender_psid) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let response1 = getditailviewmusictemplate();
+            // send teck masseges
+            await callSendAPI(sender_psid, response1)
+
+            resolve('done')
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
+let getditailviewmusictemplate = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [
+                    {
+                        "title": "ÂM NHẠC",
+                        "subtitle": "T2 - T6 từ 7PM30 - 10PM, T7 từ 8PM - 11PM, CN từ 7PM - 11PM",
+                        "image_url": 'https://bizweb.dktcdn.net/100/127/787/files/295575282-502817108186499-3820513038597196827-n.jpg?v=1670473477126',
 
                     }, {
                         "title": "QUAY TRỞ LẠI",
