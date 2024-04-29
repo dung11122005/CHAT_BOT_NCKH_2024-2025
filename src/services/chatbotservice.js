@@ -3,7 +3,7 @@ import request from "request";
 require('dotenv').config();
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 const IMAGE_GET_STARTED = 'https://lavenderstudio.com.vn/wp-content/uploads/2017/03/chup-san-pham.jpg'
-let callSendAPI = (sender_psid, response) => {
+let callSendAPI = async (sender_psid, response) => {
     // Construct the message body
     let request_body = {
         "recipient": {
@@ -11,7 +11,8 @@ let callSendAPI = (sender_psid, response) => {
         },
         "message": response
     }
-
+    await sendmarkreadmessenge(sender_psid)
+    await sendtypingon(sender_psid)
     // Send the HTTP request to the Messenger Platform
     request({
         "uri": "https://graph.facebook.com/v19.0/me/messages",
@@ -26,6 +27,64 @@ let callSendAPI = (sender_psid, response) => {
         }
     });
 }
+
+
+
+
+
+let sendtypingon = (sender_psid) => {
+    // Construct the message body
+    let request_body = {
+        "recipient": {
+            "id": sender_psid
+        },
+        "sender_action": "typing_on"
+    }
+
+    // Send the HTTP request to the Messenger Platform
+    request({
+        "uri": "https://graph.facebook.com/v19.0/me/messages",
+        "qs": { "access_token": PAGE_ACCESS_TOKEN },
+        "method": "POST",
+        "json": request_body
+    }, (err, res, body) => {
+        if (!err) {
+            console.log('message send typingon!')
+        } else {
+            console.error("Unable to send typingon:" + err);
+        }
+    });
+}
+let sendmarkreadmessenge = (sender_psid) => {
+    // Construct the message body
+    let request_body = {
+        "recipient": {
+            "id": sender_psid
+        },
+        "sender_action": "mark_seen"
+    }
+
+    // Send the HTTP request to the Messenger Platform
+    request({
+        "uri": "https://graph.facebook.com/v19.0/me/messages",
+        "qs": { "access_token": PAGE_ACCESS_TOKEN },
+        "method": "POST",
+        "json": request_body
+    }, (err, res, body) => {
+        if (!err) {
+            console.log('message send typingon!')
+        } else {
+            console.error("Unable to send typingon:" + err);
+        }
+    });
+}
+
+
+
+
+
+
+
 
 let getusername = (sender_psid) => {
     return new Promise((resolve, reject) => {
