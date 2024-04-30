@@ -139,6 +139,9 @@ async function handlePostback(sender_psid, received_postback) {
         case 'DINNER_MENU':
             await chatbotservice.hendlegetdinnermenu(sender_psid);
             break;
+        case 'SHOW_ROOMS':
+            await chatbotservice.hendleshowdetailroom(sender_psid)
+            break
         case 'APPETIZER_MENU':
             await chatbotservice.hendledetailviewappetizer(sender_psid);
             break;

@@ -805,5 +805,6 @@ module.exports = {
     hendledetailviewdishis: hendledetailviewdishis,
     hendledetailviewdesserts: hendledetailviewdesserts,
     hendledetailviewdrinks: hendledetailviewdrinks,
-    hendledetailviewmusic: hendledetailviewmusic
+    hendledetailviewmusic: hendledetailviewmusic,
+    hendleshowdetailroom: hendleshowdetailroom
 }
