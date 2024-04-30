@@ -305,7 +305,7 @@ let handlepostreservetable = async (req, res) => {
             "text": `Thông Tin Khách Hàng Đặt bàn\n
             Họ Và Tên: ${customerName}\n
             Địa Chỉ Email: ${req.body.email}\n
-            Số Điện Thoại: ${req.body.phoneNumber}`
+            Số Điện Thoại: ${req.body.phoneNumber}\n`
         }
         await chatbotservice.callSendAPI(req.body.psid, response1);
         return res.status(200).json({
