@@ -11,7 +11,7 @@ let initwebroutes = (app) => {
     routes.post('/webhook', homecontrollers.postwebhook);
     routes.get('/webhook', homecontrollers.getwebhook);
     routes.get('/reserve-table', homecontrollers.handlereservetable);
-    routes.get('/reserve-table-ajax', homecontrollers.handlepostreservetable);
+    routes.post('/reserve-table-ajax', homecontrollers.handlepostreservetable);
     return app.use("/", routes);
 
 
