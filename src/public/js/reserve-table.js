@@ -71,7 +71,7 @@ function handleClickButtonReserveTable() {
 
             //send data to node.js server 
             $.ajax({
-                url: `https://chat-bot-g69l.onrender.com/reserve-table-ajax`,//`${window.location.origin}/reserve-table-ajax`
+                url: `${window.location.origin}/reserve-table-ajax`,//`${window.location.origin}/reserve-table-ajax`
                 method: "POST",
                 data: data,
                 success: function (data) {
