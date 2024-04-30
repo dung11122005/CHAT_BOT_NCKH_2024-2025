@@ -642,7 +642,6 @@ let hendledetailviewdrinks = (sender_psid) => {
         }
     })
 }
-
 let getditailviewdrinkstemplate = () => {
     let response = {
         "attachment": {
@@ -734,6 +733,63 @@ let getditailviewmusictemplate = () => {
     }
     return response
 }
+
+
+
+
+
+
+let hendleshowdetailroom = (sender_psid) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let response1 = getimageroomtempale();
+            let response2 = getbuttonroomtemplate();
+            // send teck masseges
+            await callSendAPI(sender_psid, response1)
+            await callSendAPI(sender_psid, response2)
+            resolve('done')
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
+let getimageroomtempale = () => {
+    let response = {
+        "attachment": {
+            "type": "image",
+            "payload": {
+                "url": "https://i.gifer.com/Sfs.gif",
+                "is_reusable": true
+            }
+        }
+    }
+    return response
+}
+let getbuttonroomtemplate = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "button",
+                "text": "NHÀ HÀNG CÓ THỂ PHỤC VỤ TỐI ĐA 500 KHÁCH",
+                "buttons": [
+                    {
+                        "type": "postback",
+                        "title": "QUAY LẠI",
+                        "payload": "BACK_TO_MAIN_MENU",
+                    }, {
+                        "type": "postback",
+                        "title": "ĐẶT BÀN",
+                        "payload": "RESERVE_TABLE",
+                    }
+                ]
+            }
+        }
+    }
+    return response
+}
+
+
 
 
 
