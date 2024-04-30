@@ -302,7 +302,7 @@ let handlepostreservetable = async (req, res) => {
         }
 
         let response1 = {
-            "text": `.......Thông Tin Khách Hàng Đặt bàn.......\n
+            "text": `Thông Tin Khách Hàng Đặt bàn\n
             Họ Và Tên: ${customerName}\n
             Địa Chỉ Email: ${req.body.email}\n
             Số Điện Thoại: ${req.body.phoneNumber}`
@@ -312,7 +312,7 @@ let handlepostreservetable = async (req, res) => {
             message: 'ok'
         })
     } catch (e) {
-        console.log('loi post reserve tabel:', e)
+        console.log('loi post reserve tabel: ', e)
         return res.status(500).json({
             message: 'seever error'
         })
