@@ -812,5 +812,6 @@ module.exports = {
     hendledetailviewdesserts: hendledetailviewdesserts,
     hendledetailviewdrinks: hendledetailviewdrinks,
     hendledetailviewmusic: hendledetailviewmusic,
-    hendleshowdetailroom: hendleshowdetailroom
+    hendleshowdetailroom: hendleshowdetailroom,
+    callSendAPI: callSendAPI
 }

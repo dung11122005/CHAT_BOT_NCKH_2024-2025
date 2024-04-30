@@ -292,11 +292,45 @@ let handlereservetable = (req, res) => {
 
 
 
+let handlepostreservetable = async (req, res) => {
+    try {
+        let customerName = "";
+        if (req.body.customerName === "") {
+            customerName = "Để Trống"
+        } else {
+            customerName = req.body.customerName
+        }
+
+        let response1 = {
+            "text": `.......Thông Tin Khách Hàng Đặt bàn.......\n
+            Họ Và Tên: ${customerName}\n
+            Địa Chỉ Email: ${req.body.email}\n
+            Số Điện Thoại: ${req.body.phoneNumber}`
+        }
+        await chatbotservice.callSendAPI(req.body.psid, response1);
+        return res.status(200).json({
+            message: 'ok'
+        })
+    } catch (e) {
+        console.log('loi post reserve tabel:', e)
+        return res.status(500).json({
+            message: 'seever error'
+        })
+    }
+}
+
+
+
+
+
+
+
 module.exports = {
     gethomepage: gethomepage,
     postwebhook: postwebhook,
     getwebhook: getwebhook,
     setupprofile: setupprofile,
     setuppersistentmenu: setuppersistentmenu,
-    handlereservetable: handlereservetable
+    handlereservetable: handlereservetable,
+    handlepostreservetable: handlepostreservetable
 }
