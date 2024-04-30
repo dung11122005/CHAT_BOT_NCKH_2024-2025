@@ -145,9 +145,11 @@ let getstartedtemplate = () => {
                             "payload": "MAIN_MENU",
                         },
                         {
-                            "type": "postback",
+                            "type": "web_url",
+                            "url": `${process.env.URL_WEB_VIEW_ORDER}`,
                             "title": "ĐẶT BÀN",
-                            "payload": "RESERVE_TABLE",
+                            "webview_height_ratio": "tall",
+                            "messenger_extensions": true //false : open the webview in new tab
                         },
                         {
                             "type": "postback",
@@ -208,9 +210,11 @@ let getmainmenutemplate = () => {
                         "image_url": 'https://www.hoteljob.vn/files/Anh-HTJ-Hong/van-hoa-am-thuc-phuong-tay-7.jpg',
                         "buttons": [
                             {
-                                "type": "postback",
+                                "type": "web_url",
+                                "url": `${process.env.URL_WEB_VIEW_ORDER}`,
                                 "title": "ĐẶT BÀN",
-                                "payload": "RESERVE_TABLE",
+                                "webview_height_ratio": "tall",
+                                "messenger_extensions": true //false : open the webview in new tab
                             }
                         ],
                     }, {
@@ -778,9 +782,11 @@ let getbuttonroomtemplate = () => {
                         "title": "QUAY LẠI",
                         "payload": "BACK_TO_MAIN_MENU",
                     }, {
-                        "type": "postback",
+                        "type": "web_url",
+                        "url": `${process.env.URL_WEB_VIEW_ORDER}`,
                         "title": "ĐẶT BÀN",
-                        "payload": "RESERVE_TABLE",
+                        "webview_height_ratio": "tall",
+                        "messenger_extensions": true //false : open the webview in new tab
                     }
                 ]
             }

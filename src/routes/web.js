@@ -10,6 +10,7 @@ let initwebroutes = (app) => {
     routes.post('/setup-persistent-menu', homecontrollers.setuppersistentmenu)
     routes.post('/webhook', homecontrollers.postwebhook);
     routes.get('/webhook', homecontrollers.getwebhook);
+    routes.get('/reserve-table', homecontrollers.handlereservetable);
     return app.use("/", routes);
 
 

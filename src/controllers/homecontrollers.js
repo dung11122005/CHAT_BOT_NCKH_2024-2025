@@ -42,6 +42,8 @@ let postwebhook = (req, res) => {
 }
 
 
+
+
 let getwebhook = (req, res) => {
     let VERYFY_TOKEN = process.env.VERYFY_TOKEN;
     // Parse the query params
@@ -62,6 +64,7 @@ let getwebhook = (req, res) => {
         }
     }
 }
+
 
 
 // Handles messages events
@@ -108,6 +111,10 @@ function handleMessage(sender_psid, received_message) {
     // Send the response message
     callSendAPI(sender_psid, response);
 }
+
+
+
+
 
 // Handles messaging_postbacks events
 async function handlePostback(sender_psid, received_postback) {
@@ -165,6 +172,10 @@ async function handlePostback(sender_psid, received_postback) {
     // callSendAPI(sender_psid, response);
 }
 
+
+
+
+
 // Sends response messages via the Send API
 function callSendAPI(sender_psid, response) {
     // Construct the message body
@@ -190,6 +201,10 @@ function callSendAPI(sender_psid, response) {
     });
 }
 
+
+
+
+
 let setupprofile = async (req, res) => {
     //call profile facebook API
     // Construct the message body
@@ -214,6 +229,10 @@ let setupprofile = async (req, res) => {
     });
     return res.send("setup user profile succesds")
 }
+
+
+
+
 
 let setuppersistentmenu = async (req, res) => {
     //call profile facebook API
@@ -263,10 +282,21 @@ let setuppersistentmenu = async (req, res) => {
     return res.send("setup persistent menu succesds")
 }
 
+
+
+let handlereservetable = (req, res) => {
+    return res.render('reserve-table.ejs')
+}
+
+
+
+
+
 module.exports = {
     gethomepage: gethomepage,
     postwebhook: postwebhook,
     getwebhook: getwebhook,
     setupprofile: setupprofile,
-    setuppersistentmenu: setuppersistentmenu
+    setuppersistentmenu: setuppersistentmenu,
+    handlereservetable: handlereservetable
 }
