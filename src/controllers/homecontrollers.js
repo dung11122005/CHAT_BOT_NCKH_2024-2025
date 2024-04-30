@@ -314,7 +314,7 @@ let handlepostreservetable = async (req, res) => {
     } catch (e) {
         console.log('loi post reserve tabel: ', e)
         return res.status(500).json({
-            message: 'seever error'
+            message: 'server error'
         })
     }
 }
