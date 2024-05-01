@@ -1,3 +1,4 @@
+
 (function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) { return; }
@@ -70,7 +71,7 @@ function handleClickButtonReserveTable() {
 
             //send data to node.js server 
             $.ajax({
-                url: `${window.location.origin}/reserve-table-ajax`,//`${window.location.origin}/reserve-table-ajax`
+                url: `${window.location.origin}/reserve-table-ajax`,
                 method: "POST",
                 data: data,
                 success: function (data) {
