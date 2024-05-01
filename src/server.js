@@ -2,8 +2,10 @@ import express from "express";
 import bodyParser from "body-parser";
 import viewengine from "./configs/viewengine";
 import webroutes from "./routes/web";
+import path from "path";
 
 let app = express();
+app.use(express.static('public'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 //config view engine 
