@@ -5,7 +5,7 @@ import webroutes from "./routes/web";
 import path from "path";
 
 let app = express();
-app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 //config view engine 
