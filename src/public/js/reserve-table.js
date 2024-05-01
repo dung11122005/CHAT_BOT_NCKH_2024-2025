@@ -1,4 +1,3 @@
-
 (function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) { return; }
@@ -10,7 +9,7 @@
 window.extAsyncInit = function () {
     // the Messenger Extensions JS SDK is done loading 
 
-    MessengerExtensions.getContext('258341520704025',
+    MessengerExtensions.getContext('1104807540743573',
         function success(thread_context) {
             // success
             //set psid to input
