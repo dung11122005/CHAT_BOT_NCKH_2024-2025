@@ -175,11 +175,11 @@ async function handlePostback(sender_psid, received_postback) {
             break;
         default:
             response = { "text": `oop! i don't know respose with postback ${payload}` }
-            client.message(payload)
-                .then(data => {
-                    console.log('Yay, got Wit.ai response: ' + JSON.stringify(data));
-                })
-                .catch(console.error);
+        // client.message(payload)
+        //     .then(data => {
+        //         console.log('Yay, got Wit.ai response: ' + JSON.stringify(data));
+        //     })
+        //     .catch(console.error);
     }
 
     // Send the message to acknowledge the postback
