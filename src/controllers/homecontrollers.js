@@ -175,7 +175,6 @@ async function handlePostback(sender_psid, received_postback) {
             break;
         default:
             response = { "text": `oop! i don't know respose with postback ${payload}` }
-            response = { "text": `oop! i don't know respose with postback ${payload}` }
             client.message(payload)
                 .then(data => {
                     console.log('Yay, got Wit.ai response: ' + JSON.stringify(data));
