@@ -11,8 +11,8 @@ const client = new Wit({
 let gethomepage = (req, res) => {
     return res.render('homepage.ejs');
 };
-let postwebhook = (req, res) => {
 
+let postwebhook = (req, res) => {
 
     let body = req.body;
     console.log(`\u{1F7EA} Received webhook:`);
@@ -175,11 +175,11 @@ async function handlePostback(sender_psid, received_postback) {
             break;
         default:
             response = { "text": `oop! i don't know respose with postback ${payload}` }
-            client.message(payload)
-                .then(data => {
-                    console.log('Yay, got Wit.ai response: ' + JSON.stringify(data));
-                })
-                .catch(console.error);
+        // client.message(payload)
+        //     .then(data => {
+        //         console.log('Yay, got Wit.ai response: ' + JSON.stringify(data));
+        //     })
+        //     .catch(console.error);
     }
 
     // Send the message to acknowledge the postback
