@@ -1,12 +1,19 @@
 require('dotenv').config();
 import request from 'request';
 import chatbotservice from '../services/chatbotservice'
+const { Wit, log } = require('node-wit');
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+const client = new Wit({
+    accessToken: process.env.SERVER_ACCESS_TOKEN,
+    logger: new log.Logger(log.DEBUG) // optional
+});
 
 let gethomepage = (req, res) => {
     return res.render('homepage.ejs');
 };
 let postwebhook = (req, res) => {
+
+
     let body = req.body;
     console.log(`\u{1F7EA} Received webhook:`);
     console.dir(body, { depth: null });
@@ -39,6 +46,8 @@ let postwebhook = (req, res) => {
         // Return a '404 Not Found' if event is not from a page subscription
         res.sendStatus(404);
     }
+
+
 }
 
 
@@ -166,6 +175,12 @@ async function handlePostback(sender_psid, received_postback) {
             break;
         default:
             response = { "text": `oop! i don't know respose with postback ${payload}` }
+            response = { "text": `oop! i don't know respose with postback ${payload}` }
+            client.message(payload)
+                .then(data => {
+                    console.log('Yay, got Wit.ai response: ' + JSON.stringify(data));
+                })
+                .catch(console.error);
     }
 
     // Send the message to acknowledge the postback
