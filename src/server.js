@@ -3,11 +3,16 @@ import bodyParser from "body-parser";
 import viewengine from "./configs/viewengine";
 import webroutes from "./routes/web";
 import path from "path";
+const { Wit, log } = require('node-wit');
+
 
 let app = express();
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
+
+
+
 //config view engine 
 viewengine(app);
 
