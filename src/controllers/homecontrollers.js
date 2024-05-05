@@ -84,13 +84,19 @@ function handleMessage(sender_psid, received_message) {
     if (received_message.text) {
         // Create the payload for a basic text message, which
         // will be added to the body of our request to the Send API
+        function firstTrait(nlp, name) {
+            return received_message && received_message.entities && received_message.traits[name] && received_message.traits[name][0];
+        }
+        let greeting = firstTrait(message.nlp, 'wit$greetings')
+        if (greeting && greeting.confidence > 0.8) {
+            let ss = "hello"
+        } else {
+            // default logic
+        }
         response = {
-            // client.message(received_message)
-            //     .then(data => {
-            //         console.log('Yay, got Wit.ai response: ' + JSON.stringify(data));
-            //     })
-            //     .catch(console.error);
-            "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
+            "text": `${ss}`
+
+            //"text": `You sent the message: "${received_message.text}". Now send me an attachment!`
         }
     } else if (received_message.attachments) {
         // Get the URL of the message attachment
