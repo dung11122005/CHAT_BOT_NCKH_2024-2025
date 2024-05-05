@@ -85,7 +85,7 @@ function handleMessage(sender_psid, received_message) {
         // Create the payload for a basic text message, which
         // will be added to the body of our request to the Send API
         function firstTrait(nlp, name) {
-            return received_message && received_message.entities && received_message.traits[name] && received_message.traits[name][0];
+            return nlp && nlp.entities && nlp.traits[name] && nlp.traits[name][0];
         }
         let greeting = firstTrait(message.nlp, 'wit$greetings')
         if (greeting && greeting.confidence > 0.8) {
