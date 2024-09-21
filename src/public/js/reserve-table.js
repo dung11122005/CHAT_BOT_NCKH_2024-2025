@@ -7,7 +7,7 @@
 }(document, 'script', 'Messenger'));
 
 window.extAsyncInit = function () {
-    // the Messenger Extensions JS SDK is done loading 
+    // the Messenger Extensions JS SDK is done loading
 
     MessengerExtensions.getContext('1104807540743573',
         function success(thread_context) {
@@ -68,7 +68,7 @@ function handleClickButtonReserveTable() {
                 console.log(err);
             });
 
-            //send data to node.js server 
+            //send data to node.js server
             $.ajax({
                 url: `${window.location.origin}/reserve-table-ajax`,
                 method: "POST",

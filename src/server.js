@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 
 
-//config view engine 
+//config view engine
 viewengine(app);
 
 //config routes

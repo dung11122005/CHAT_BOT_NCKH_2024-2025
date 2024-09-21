@@ -797,7 +797,53 @@ let getbuttonroomtemplate = () => {
 
 
 
+// Gửi tin nhắn tới Wit.ai và xử lý kết quả
+let handleException = (senderId, messageText) => {
+    fetch(`https://api.wit.ai/message?v=20240921&q=${encodeURIComponent(messageText)}`, {
+        headers: {
+            'Authorization': `Bearer ${process.env.SERVER_ACCESS_TOKEN}`,
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            const intent = data.intents && data.intents.length > 0 ? data.intents[0].name : null;
+            let replyMessage = 'Tôi không hiểu ý bạn.';
 
+            // Xử lý các intents từ Wit.ai
+            if (intent === 'greeting') {
+                replyMessage = 'Chào bạn!';
+            } else if (intent === 'bye') {
+                replyMessage = 'Tạm biệt!';
+            }
+
+            // Gửi tin nhắn phản hồi lại cho người dùng
+            sendMessage(senderId, replyMessage);
+        })
+        .catch(error => {
+            console.error('Error from Wit.ai:', error);
+        });
+};
+
+// Gửi tin nhắn phản hồi lại Facebook Messenger
+function sendMessage(senderId, text) {
+    fetch(`https://graph.facebook.com/v15.0/me/messages?access_token=${process.env.PAGE_ACCESS_TOKEN}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            recipient: { id: senderId },
+            message: { text: text },
+        }),
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Message sent:', data);
+        })
+        .catch(error => {
+            console.error('Error sending message:', error);
+        });
+}
 
 
 
