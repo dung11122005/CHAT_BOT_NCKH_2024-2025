@@ -859,5 +859,6 @@ module.exports = {
     hendledetailviewdrinks: hendledetailviewdrinks,
     hendledetailviewmusic: hendledetailviewmusic,
     hendleshowdetailroom: hendleshowdetailroom,
-    callSendAPI: callSendAPI
+    callSendAPI: callSendAPI,
+    handleException: handleException
 }
