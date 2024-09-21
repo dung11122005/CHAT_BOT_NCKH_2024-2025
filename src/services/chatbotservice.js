@@ -808,7 +808,7 @@ let handleException = (senderId, messageText) => {
         .then(data => {
             const intent = data.intents && data.intents.length > 0 ? data.intents[0].name : null;
             let replyMessage = data.msg;
-
+            console.log('>>>>   ', data.msg)
             if (replyMessage === null) {
                 replyMessage = 'tôi không hiểu bạn hỏi gì'
             }
