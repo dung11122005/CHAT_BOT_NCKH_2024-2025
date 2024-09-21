@@ -34,8 +34,7 @@ let postwebhook = (req, res) => {
             // Check if the event is a message or postback and
             // pass the event to the appropriate handler function
             if (webhook_event.message) {
-                handlePostback(sender_psid, webhook_event.postback);
-                //handleMessage(sender_psid, webhook_event.message);
+                handleMessage(sender_psid, webhook_event.message);
             } else if (webhook_event.postback) {
                 handlePostback(sender_psid, webhook_event.postback);
             }
@@ -94,9 +93,9 @@ function handleMessage(sender_psid, received_message) {
         // } else {
         //     // default logic
         // }
+        chatbotservice.handleException(sender_psid, received_message.text);
         response = {
             //"text": `${ss}`
-
             "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
         }
     } else if (received_message.attachments) {
@@ -186,8 +185,7 @@ async function handlePostback(sender_psid, received_postback) {
             await chatbotservice.hendledetailviewmusic(sender_psid);
             break;
         default:
-            console.log('>>>>>>> handleException');
-            await chatbotservice.handleException(sender_psid, payload);
+            console.log('tôi không hiểu bạn hỏi gì')
         // client.message(payload)
         //     .then(data => {
         //         console.log('Yay, got Wit.ai response: ' + JSON.stringify(data));
