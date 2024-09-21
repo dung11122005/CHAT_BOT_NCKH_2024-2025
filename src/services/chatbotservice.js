@@ -1,4 +1,5 @@
 import { response } from "express";
+import { interactive } from "node-wit";
 import request from "request";
 require('dotenv').config();
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
@@ -807,11 +808,12 @@ let handleException = (senderId, messageText) => {
         .then(response => response.json())
         .then(data => {
             const intent = data.intents && data.intents.length > 0 ? data.intents[0].name : null;
-            let replyMessage = data.msg;
-            console.log('>>>>   ', data.msg)
-            if (replyMessage === null) {
-                replyMessage = 'tôi không hiểu bạn hỏi gì'
+            let replyMessage = 'Tôi không hiểu bạn hỏi gì'
+
+            if (intent === 'muon_nhan_phan_thuong') {
+                replyMessage = 'học bổng loại giỏi: gpa >= 3.6 điểm và rèn luyện >= 90'
             }
+
             // Gửi tin nhắn phản hồi lại cho người dùng
             sendMessage(senderId, replyMessage);
         })
