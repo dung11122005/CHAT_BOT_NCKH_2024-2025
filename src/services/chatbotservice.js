@@ -807,8 +807,11 @@ let handleException = (senderId, messageText) => {
         .then(response => response.json())
         .then(data => {
             const intent = data.intents && data.intents.length > 0 ? data.intents[0].name : null;
-            let replyMessage = 'Tôi không hiểu ý bạn.';
+            let replyMessage = data.msg;
 
+            if (replyMessage === null) {
+                replyMessage = 'tôi không hiểu bạn hỏi gì'
+            }
             // Gửi tin nhắn phản hồi lại cho người dùng
             sendMessage(senderId, replyMessage);
         })
