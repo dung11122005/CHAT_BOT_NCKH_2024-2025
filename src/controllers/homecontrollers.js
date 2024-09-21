@@ -94,10 +94,10 @@ function handleMessage(sender_psid, received_message) {
         //     // default logic
         // }
         chatbotservice.handleException(sender_psid, received_message.text);
-        response = {
-            //"text": `${ss}`
-            "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
-        }
+        // response = {
+        //     //"text": `${ss}`
+        //     "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
+        // }
     } else if (received_message.attachments) {
         // Get the URL of the message attachment
         let attachment_url = received_message.attachments[0].payload.url;
