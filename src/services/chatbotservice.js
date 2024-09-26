@@ -1,5 +1,6 @@
 import { response } from "express";
 import { interactive } from "node-wit";
+import db from "../models/index"
 import request from "request";
 require('dotenv').config();
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
@@ -799,30 +800,35 @@ let getbuttonroomtemplate = () => {
 
 
 // Gửi tin nhắn tới Wit.ai và xử lý kết quả
-let handleException = (senderId, messageText) => {
-    fetch(`https://api.wit.ai/message?v=20240921&q=${encodeURIComponent(messageText)}`, {
-        headers: {
-            'Authorization': `Bearer ${process.env.SERVER_ACCESS_TOKEN}`,  // Thêm dấu nháy kép
-        }
-    })
-        .then(response => response.json())
-        .then(data => {
-            const intent = data.intents && data.intents.length > 0 ? data.intents[0].name : null;
-            const confidence = data.intents && data.intents.length > 0 ? data.intents[0].confidence : 0;
-            let replyMessage = 'Tôi không hiểu bạn hỏi gì'
-
-            if (intent === 'muon_nhan_phan_thuong' && confidence >= 0.6) {
-                replyMessage = 'học bổng loại giỏi: gpa >= 3.6 điểm và rèn luyện >= 90'
-            } else if (intent === 'tim_hieu_truong' && confidence >= 0.7) {
-                replyMessage = 'trường đại học sư phạm có lịch sử hình thành và phát triển rất lâu đời. là những trường đại học đào tạo giáo viên và cán bộ quản lý giáo dục cho các cấp học từ mầm non đến trung học phổ thông, trường có 2 cơ sở và 1 kí túc xá'
+let handleException = async (senderId, messageText) => {
+    try {
+        fetch(`https://api.wit.ai/message?v=20240921&q=${encodeURIComponent(messageText)}`, {
+            headers: {
+                'Authorization': `Bearer ${process.env.SERVER_ACCESS_TOKEN}`,  // Thêm dấu nháy kép
             }
-
-            // Gửi tin nhắn phản hồi lại cho người dùng
-            sendMessage(senderId, replyMessage);
         })
-        .catch(error => {
-            console.error('Error from Wit.ai:', error);
-        });
+            .then(response => response.json())
+            .then(async data => {
+                const intent = data.intents && data.intents.length > 0 ? data.intents[0].name : null;
+                const confidence = data.intents && data.intents.length > 0 ? data.intents[0].confidence : 0;
+                let replyMessage = 'Tôi không hiểu bạn hỏi gì'
+                let answer_01 = await db.Trafficlaws.findOne({
+                    where: {
+                        purpose: intent
+                    }
+                })
+                replyMessage = answer_01
+
+                // Gửi tin nhắn phản hồi lại cho người dùng
+                sendMessage(senderId, replyMessage);
+            })
+            .catch(error => {
+                console.error('Error from Wit.ai:', error);
+            });
+    } catch (error) {
+
+    }
+
 };
 
 // Gửi tin nhắn phản hồi lại Facebook Messenger

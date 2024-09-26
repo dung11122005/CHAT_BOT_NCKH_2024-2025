@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import viewengine from "./configs/viewengine";
+import viewengine from "./config/viewengine";
 import webroutes from "./routes/web";
 import path from "path";
 const { Wit, log } = require('node-wit');

@@ -1,5 +1,7 @@
 import express from "express";
 import homecontrollers from "../controllers/homecontrollers";
+import trafficlawscontrollers from "../controllers/trafficlawscontrollers";
+
 let routes = express.Router();
 
 let initwebroutes = (app) => {
@@ -12,6 +14,13 @@ let initwebroutes = (app) => {
     routes.get('/webhook', homecontrollers.getwebhook);
     routes.get('/reserve-table', homecontrollers.handlereservetable);
     routes.post('/reserve-table-ajax', homecontrollers.handlepostreservetable);
+
+
+    //trafficlawscontrollers
+    routes.get('/trafficlaws', trafficlawscontrollers.getAlltrafficlaws);
+    routes.get('/create-trafficlaws', trafficlawscontrollers.displayCreatetrafficlaws);
+    routes.post('/post-trafficlaws', trafficlawscontrollers.handleCreatetrafficlaws);
+
     return app.use("/", routes);
 
 
