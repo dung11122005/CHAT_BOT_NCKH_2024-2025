@@ -12,8 +12,7 @@ let getAlltrafficlaws = () => {
                 errmessage: "get all Trafficlaws success",
                 data: data
             })
-        } catch (error) {
-
+        } catch (e) {
             reject(e)
         }
     })
@@ -38,7 +37,7 @@ let handleCreatetrafficlaws = (data) => {
                 errcode: 0,
                 errmessage: "create Trafficlaws success"
             })
-        } catch (error) {
+        } catch (e) {
 
             reject(e)
         }
