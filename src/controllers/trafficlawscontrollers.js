@@ -32,7 +32,7 @@ let handleCreatetrafficlaws = async (req, res) => {
         if (create.errcode != 0) {
             console.log(errmessage);
         }
-        res.redirect('/create-trafficlaws')
+        res.redirect('/trafficlaws')
     } catch (error) {
 
     }
