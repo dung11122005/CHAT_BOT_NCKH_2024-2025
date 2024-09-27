@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
 
-// Option 2: Passing parameters separately (sqlite)
+// Option 3: Passing parameters separately (other dialects)
 const sequelize = new Sequelize(
     process.env.DB_DATABASE_NAME,
     process.env.DB_USERNAME,
@@ -21,9 +21,6 @@ const sequelize = new Sequelize(
                     }
                 } : {}
         ,
-        query: {
-            "raw": true
-        },
         timezone: "+07:00"
     });
 

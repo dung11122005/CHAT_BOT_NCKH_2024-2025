@@ -25,9 +25,6 @@ const customizeConfig = {
         }
       } : {}
   ,
-  query: {
-    "raw": true
-  },
   timezone: "+07:00"
 }
 
