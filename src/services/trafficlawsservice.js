@@ -5,8 +5,7 @@ import db from "../models/index"
 let getAlltrafficlaws = () => {
     return new Promise(async (resolve, reject) => {
         try {
-
-            let data = await db.Trafficlaws.findAll()
+            let data = db.public.Trafficlaws.findAll()
             resolve({
                 errcode: 0,
                 errmessage: "get all Trafficlaws success",
@@ -27,7 +26,7 @@ let handleCreatetrafficlaws = (data) => {
                     errmessage: "data null"
                 })
             }
-            await db.Trafficlaws.create({
+            db.public.Trafficlaws.create({
                 purpose: data.purpose,
                 answer_01: data.answer_01,
                 answer_02: data.answer_02,

@@ -10,7 +10,7 @@ const sequelize = new Sequelize(
     {
         host: process.env.DB_HOST,
         port: process.env.DB_PORT,
-        dialect: 'postgres',
+        dialect: process.env.DB_DIALECT,
         logging: false,
         dialectOptions:
             process.env.DB_SSL === 'true' ?
@@ -22,7 +22,8 @@ const sequelize = new Sequelize(
                 } : {}
         ,
         timezone: "+07:00"
-    });
+    }
+);
 
 let connectDb = async () => {
     try {

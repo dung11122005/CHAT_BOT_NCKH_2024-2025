@@ -4,8 +4,8 @@ import request from 'request';
 
 let getAlltrafficlaws = async (req, res) => {
     try {
-        let data = await trafficlawsservice.getAlltrafficlaws()
-
+        let data = trafficlawsservice.getAlltrafficlaws()
+        console.log('>>>>>>>>>>>>>>', data.data)
         return res.render('trafficlaws/getAllTrafficlaws.ejs', { listTrafficlaws: data.data });
     } catch (error) {
 
@@ -28,9 +28,9 @@ let displayCreatetrafficlaws = async (req, res) => {
 
 let handleCreatetrafficlaws = async (req, res) => {
     try {
-        let create = await trafficlawsservice.handleCreatetrafficlaws(req.body)
+        let create = trafficlawsservice.handleCreatetrafficlaws(req.body)
         if (create.errcode != 0) {
-            console.log(errmessage);
+            console.log('>>>>>>>>>>>>', errmessage);
         }
         res.redirect('/trafficlaws')
     } catch (error) {
