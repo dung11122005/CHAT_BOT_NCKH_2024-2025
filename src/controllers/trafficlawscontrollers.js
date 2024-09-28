@@ -4,7 +4,7 @@ import request from 'request';
 
 let getAlltrafficlaws = async (req, res) => {
     try {
-        let data = trafficlawsservice.getAlltrafficlaws()
+        let data = await trafficlawsservice.getAlltrafficlaws()
         console.log('>>>>>>>>>>>>>>', data.data)
         return res.render('trafficlaws/getAllTrafficlaws.ejs', { listTrafficlaws: data.data });
     } catch (error) {
