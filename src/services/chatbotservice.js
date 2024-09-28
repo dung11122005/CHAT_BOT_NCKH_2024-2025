@@ -817,7 +817,7 @@ let handleException = async (senderId, messageText) => {
                         purpose: intent
                     }
                 })
-                replyMessage = answer_01
+                replyMessage = answer_01.answer_01
 
 
                 console.log('>>>>>>>>>>>>  answer_01', answer_01)
