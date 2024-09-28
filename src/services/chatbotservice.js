@@ -819,6 +819,9 @@ let handleException = async (senderId, messageText) => {
                 })
                 replyMessage = answer_01
 
+
+                console.log('>>>>>>>>>>>>  answer_01', answer_01)
+
                 // Gửi tin nhắn phản hồi lại cho người dùng
                 sendMessage(senderId, replyMessage);
             })
