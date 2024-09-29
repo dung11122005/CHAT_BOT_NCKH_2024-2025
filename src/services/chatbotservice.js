@@ -193,7 +193,7 @@ let getmainmenutemplate = () => {
                     {
                         "title": "ĐẠI HỌC SƯ PHẠM TPHCM",
                         "subtitle": "CHẤT LƯỢNG - SÁNG TẠO - NHÂN VĂN",
-                        "image_url": 'https://upload.wikimedia.org/wikipedia/vi/9/9e/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg',
+                        "image_url": 'https://www.dongphucthienphuoc.vn/wp-content/uploads/2023/01/logo-truong-dai-hoc-su-pham-hcmue-mang-y-nghia-gi.jpg',
                         "buttons": [
                             {
                                 "type": "postback",
