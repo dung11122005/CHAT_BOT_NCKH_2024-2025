@@ -4,7 +4,7 @@ import db from "../models/index"
 import request from "request";
 require('dotenv').config();
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
-const IMAGE_GET_STARTED = 'https://lavenderstudio.com.vn/wp-content/uploads/2017/03/chup-san-pham.jpg'
+const IMAGE_GET_STARTED = 'https://congchungnguyenhue.com/Uploaded/Images/Original/2023/11/29/sptphcm1-16901105564401079438420_2911085949.jpg'
 let callSendAPI = async (sender_psid, response) => {
     // Construct the message body
     let request_body = {
@@ -116,7 +116,7 @@ let hendlegetstarted = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
             let username = await getusername(sender_psid);
-            let response1 = { "text": `XIN CHÀO ${username} NHÉ, TỚ LÀ DŨNG RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU` }
+            let response1 = { "text": `XIN CHÀO ${username} NHÉ, TỚ LÀ CHATBOT HCMUE RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU` }
             let response2 = getstartedtemplate();
             // send teck masseges
             await callSendAPI(sender_psid, response1)
@@ -137,19 +137,19 @@ let getstartedtemplate = () => {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "XIN CHÀO BẠN ĐẾN VỚI NHÀ HÀNG CỦA DŨNG",
-                    "subtitle": "DƯỚI ĐÂY LÀ MỘT SỐ TÙY CHỌN CỦA NHÀ HÀNG",
+                    "title": "XIN CHÀO BẠN ĐẾN VỚI HCMUE",
+                    "subtitle": "DƯỚI ĐÂY LÀ MỘT SỐ TÙY CHỌN HCMUE",
                     "image_url": IMAGE_GET_STARTED,
                     "buttons": [
                         {
                             "type": "postback",
-                            "title": "MENU_CHÍNH",
+                            "title": "PAGE HCMUE",
                             "payload": "MAIN_MENU",
                         },
                         {
                             "type": "web_url",
                             "url": `${process.env.URL_WEB_VIEW_ORDER}`,
-                            "title": "ĐẶT BÀN",
+                            "title": "HCMUE ONLINE",
                             "webview_height_ratio": "tall",
                             "messenger_extensions": true //false : open the webview in new tab
                         },
@@ -191,38 +191,38 @@ let getmainmenutemplate = () => {
                 "template_type": "generic",
                 "elements": [
                     {
-                        "title": "MENU CỦA NHÀ HÀNG",
-                        "subtitle": "CHÚNG TÔI HÂN HẠNH MANG ĐẾN CHO BẠN MỘT BỮA ĂN THẬT NGON MIỆNG",
-                        "image_url": 'https://www.hoteljob.vn/files/marketing-nha-hang-nhung-y-tuong-doc-dao-hieu-qua-tonglago.com1.jpg',
+                        "title": "ĐẠI HỌC SƯ PHẠM TPHCM",
+                        "subtitle": "CHẤT LƯỢNG - SÁNG TẠO - NHÂN VĂN",
+                        "image_url": 'https://upload.wikimedia.org/wikipedia/vi/9/9e/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_h%E1%BB%8Dc_S%C6%B0_ph%E1%BA%A1m_Th%C3%A0nh_ph%E1%BB%91_H%E1%BB%93_Ch%C3%AD_Minh.svg',
                         "buttons": [
                             {
                                 "type": "postback",
-                                "title": "BỮA TRƯA",
+                                "title": "CÔNG TÁC CHÍNH TRỊ",
                                 "payload": "LUNCH_MENU",
                             },
                             {
                                 "type": "postback",
-                                "title": "BỮA TỐI",
+                                "title": "PAGE CÁC KHOA",
                                 "payload": "DINNER_MENU",
                             }
                         ],
                     }, {
-                        "title": "GIỜ MỞ CỬA",
-                        "subtitle": "T2-T6 10AM - 11PM | T7 5PM - 10PM | CN 5PM - 10PM",
-                        "image_url": 'https://www.hoteljob.vn/files/Anh-HTJ-Hong/van-hoa-am-thuc-phuong-tay-7.jpg',
+                        "title": "THÔNG TIN TUYỂN SINH",
+                        "subtitle": "",
+                        "image_url": 'https://unizone.edu.vn/wp-content/uploads/2021/09/khu-tu-hoc-dai-hoc-su-pham-tphcm.jpg',
                         "buttons": [
                             {
                                 "type": "web_url",
-                                "url": `${process.env.URL_WEB_VIEW_ORDER}`,
-                                "title": "ĐẶT BÀN",
+                                "url": `https://tuyensinh.hcmue.edu.vn/?site=183`,
+                                "title": "THÔNG TIN TUYỂN SINH",
                                 "webview_height_ratio": "tall",
                                 "messenger_extensions": true //false : open the webview in new tab
                             }
                         ],
                     }, {
-                        "title": "KHÔNG GIAN NHÀ HÀNG",
-                        "subtitle": "NHÀ HÀNG CÓ SỨC CHỨA LÊN TỚI 500 KHÁCH NGỒI VÀ TƯƠNG TỰ TIỆC ĐÁM CƯỚI",
-                        "image_url": 'https://www.hoteljob.vn/files/Anh-HTJ-Hong/van-hoa-an-buffet-5.jpg',
+                        "title": "THÔNG TIN THÊM VỀ HCMUE",
+                        "subtitle": "Ho Chi Minh City University of Education – HCMUE) được thành lập ngày 27 tháng 10 năm 1976",
+                        "image_url": 'https://vnn-imgs-f.vgcloud.vn/2018/04/27/17/cu-soc-cua-giang-vien-ngay-dau-vao-sai-gon-sau-giai-phong-3.jpg',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -811,19 +811,25 @@ let handleException = async (senderId, messageText) => {
             .then(async data => {
                 const intent = data.intents && data.intents.length > 0 ? data.intents[0].name : null;
                 const confidence = data.intents && data.intents.length > 0 ? data.intents[0].confidence : 0;
-                let replyMessage = 'Tôi không hiểu bạn hỏi gì'
-                let answer_01 = await db.Trafficlaws.findOne({
+                let replyMessage1 = 'Tôi không hiểu bạn hỏi gì'
+                let replyMessage2 = null
+                let replyMessage3 = null
+
+                let answer = await db.Trafficlaws.findOne({
                     where: {
                         purpose: intent
                     }
                 })
-                replyMessage = answer_01.answer_01
-
+                replyMessage1 = answer.answer_01
+                replyMessage2 = answer.answer_02
+                replyMessage3 = answer.answer_03
 
                 //console.log('>>>>>>>>>>>>  answer_01', answer_01)
 
                 // Gửi tin nhắn phản hồi lại cho người dùng
-                sendMessage(senderId, replyMessage);
+                sendMessage(senderId, replyMessage1);
+                sendMessage(senderId, replyMessage2);
+                sendMessage(senderId, replyMessage3);
             })
             .catch(error => {
                 console.error('Error from Wit.ai:', error);
