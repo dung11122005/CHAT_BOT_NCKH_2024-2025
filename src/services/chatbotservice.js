@@ -148,7 +148,7 @@ let getstartedtemplate = () => {
                         },
                         {
                             "type": "web_url",
-                            "url": `https://online.hcmue.edu.vn/`,
+                            "url": `${process.env.URL_WEB_VIEW_ORDER}`,
                             "title": "HCMUE ONLINE",
                             "webview_height_ratio": "tall",
                             "messenger_extensions": true //false : open the webview in new tab
@@ -213,7 +213,7 @@ let getmainmenutemplate = () => {
                         "buttons": [
                             {
                                 "type": "web_url",
-                                "url": `https://tuyensinh.hcmue.edu.vn/?site=183`,
+                                "url": `${process.env.URL_WEB_TUYEN_SINH}`,
                                 "title": "THÔNG TIN TUYỂN SINH",
                                 "webview_height_ratio": "tall",
                                 "messenger_extensions": true //false : open the webview in new tab
