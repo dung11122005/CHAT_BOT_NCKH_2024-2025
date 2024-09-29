@@ -820,9 +820,14 @@ let handleException = async (senderId, messageText) => {
                         purpose: intent
                     }
                 })
-                replyMessage1 = answer.answer_01
-                replyMessage2 = answer.answer_02
-                replyMessage3 = answer.answer_03
+
+                if (answer != null) {
+                    replyMessage1 = answer.answer_01
+                    replyMessage2 = answer.answer_02
+                    replyMessage3 = answer.answer_03
+                }
+
+
 
                 //console.log('>>>>>>>>>>>>  answer_01', answer_01)
 
