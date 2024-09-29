@@ -149,7 +149,7 @@ let getstartedtemplate = () => {
                         {
                             "type": "web_url",
                             "url": `${process.env.URL_WEB_VIEW_ORDER}`,
-                            "title": "HCMUE ONLINE",
+                            "title": "HCMUE",
                             "webview_height_ratio": "tall",
                             "messenger_extensions": true //false : open the webview in new tab
                         },
