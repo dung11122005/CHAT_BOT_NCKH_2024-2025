@@ -4,7 +4,7 @@ import db from "../models/index"
 import request from "request";
 require('dotenv').config();
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
-const IMAGE_GET_STARTED = 'https://jobtest.vn/hrblog/wp-content/uploads/2022/07/hoc-phi-dai-hoc-su-pham-tphcm-anh-1.jpg'
+const IMAGE_GET_STARTED = ''
 let callSendAPI = async (sender_psid, response) => {
     // Construct the message body
     let request_body = {
@@ -139,7 +139,7 @@ let getstartedtemplate = () => {
                 "elements": [{
                     "title": "XIN CHÀO BẠN ĐẾN VỚI HCMUE",
                     "subtitle": "DƯỚI ĐÂY LÀ MỘT SỐ TÙY CHỌN HCMUE",
-                    "image_url": IMAGE_GET_STARTED,
+                    "image_url": 'https://jobtest.vn/hrblog/wp-content/uploads/2022/07/hoc-phi-dai-hoc-su-pham-tphcm-anh-1.jpg',
                     "buttons": [
                         {
                             "type": "postback",
