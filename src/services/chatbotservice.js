@@ -139,7 +139,7 @@ let getstartedtemplate = () => {
                 "elements": [{
                     "title": "HCMUE CHÀO BẠN",
                     "subtitle": "DƯỚI ĐÂY LÀ MỘT SỐ TÙY CHỌN HCMUE",
-                    "image_url": 'https://media.moitruongvadothi.vn/images/2022/07/22/9860-1658462930-1-52.jpg',
+                    "image_url": 'https://bizweb.dktcdn.net/100/127/787/files/295575282-502817108186499-3820513038597196827-n.jpg?v=1670473477126',
                     "buttons": [
                         {
                             "type": "postback",
