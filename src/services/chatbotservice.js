@@ -139,7 +139,7 @@ let getstartedtemplate = () => {
                 "elements": [{
                     "title": "XIN CHÀO BẠN ĐẾN VỚI HCMUE",
                     "subtitle": "DƯỚI ĐÂY LÀ MỘT SỐ TÙY CHỌN HCMUE",
-                    "image_url": 'https://jobtest.vn/hrblog/wp-content/uploads/2022/07/hoc-phi-dai-hoc-su-pham-tphcm-anh-1.jpg',
+                    "image_url": 'https://media.moitruongvadothi.vn/images/2022/07/22/9860-1658462930-1-52.jpg',
                     "buttons": [
                         {
                             "type": "postback",
@@ -148,8 +148,8 @@ let getstartedtemplate = () => {
                         },
                         {
                             "type": "web_url",
-                            "url": `${process.env.URL_WEB_VIEW_ORDER}`,
-                            "title": "HCMUE",
+                            "url": `https://online.hcmue.edu.vn`,
+                            "title": "HCMUE ONLINE",
                             "webview_height_ratio": "tall",
                             "messenger_extensions": true //false : open the webview in new tab
                         },
