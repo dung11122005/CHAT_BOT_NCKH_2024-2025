@@ -137,7 +137,7 @@ let getstartedtemplate = () => {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "XIN CHÀO BẠN ĐẾN VỚI HCMUE",
+                    "title": "HCMUE CHÀO BẠN",
                     "subtitle": "DƯỚI ĐÂY LÀ MỘT SỐ TÙY CHỌN HCMUE",
                     "image_url": 'https://media.moitruongvadothi.vn/images/2022/07/22/9860-1658462930-1-52.jpg',
                     "buttons": [
@@ -208,7 +208,7 @@ let getmainmenutemplate = () => {
                         ],
                     }, {
                         "title": "THÔNG TIN TUYỂN SINH",
-                        "subtitle": "",
+                        "subtitle": "HCMUE là ngôi trường đào tạo giáo viên tốt nhất phía nam",
                         "image_url": 'https://unizone.edu.vn/wp-content/uploads/2021/09/khu-tu-hoc-dai-hoc-su-pham-tphcm.jpg',
                         "buttons": [
                             {
@@ -221,7 +221,7 @@ let getmainmenutemplate = () => {
                         ],
                     }, {
                         "title": "THÔNG TIN THÊM VỀ HCMUE",
-                        "subtitle": "Ho Chi Minh City University of Education – HCMUE) được thành lập ngày 27 tháng 10 năm 1976",
+                        "subtitle": "Ho Chi Minh City University of Education HCMUE) được thành lập ngày 27 tháng 10 năm 1976",
                         "image_url": 'https://vnn-imgs-f.vgcloud.vn/2018/04/27/17/cu-soc-cua-giang-vien-ngay-dau-vao-sai-gon-sau-giai-phong-3.jpg',
                         "buttons": [
                             {
@@ -811,7 +811,7 @@ let handleException = async (senderId, messageText) => {
             .then(async data => {
                 const intent = data.intents && data.intents.length > 0 ? data.intents[0].name : null;
                 const confidence = data.intents && data.intents.length > 0 ? data.intents[0].confidence : 0;
-                let replyMessage1 = 'Tôi không hiểu bạn hỏi gì'
+                let replyMessage1 = 'Tôi không hiểu bạn hỏi gì, hoặc câu hỏi không liên quan đến trường Đại Học Sư Phạm TP HCM'
                 let replyMessage2 = null
                 let replyMessage3 = null
 
@@ -832,9 +832,9 @@ let handleException = async (senderId, messageText) => {
                 //console.log('>>>>>>>>>>>>  answer_01', answer_01)
 
                 // Gửi tin nhắn phản hồi lại cho người dùng
-                sendMessage(senderId, replyMessage1);
-                sendMessage(senderId, replyMessage2);
-                sendMessage(senderId, replyMessage3);
+                await sendMessage(senderId, replyMessage1);
+                await sendMessage(senderId, replyMessage2);
+                await sendMessage(senderId, replyMessage3);
             })
             .catch(error => {
                 console.error('Error from Wit.ai:', error);
