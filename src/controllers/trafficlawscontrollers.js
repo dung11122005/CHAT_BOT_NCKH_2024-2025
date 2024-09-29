@@ -28,7 +28,7 @@ let displayCreatetrafficlaws = async (req, res) => {
 
 let handleCreatetrafficlaws = async (req, res) => {
     try {
-        let create = trafficlawsservice.handleCreatetrafficlaws(req.body)
+        let create = await trafficlawsservice.handleCreatetrafficlaws(req.body)
         if (create.errcode != 0) {
             console.log('>>>>>>>>>>>>', errmessage);
         }

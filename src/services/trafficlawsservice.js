@@ -21,7 +21,7 @@ let getAlltrafficlaws = () => {
 let handleCreatetrafficlaws = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
-            if (data == null || data.purpose == '') {
+            if (data === null || data.purpose === '') {
                 resolve({
                     errcode: 1,
                     errmessage: "data null"
