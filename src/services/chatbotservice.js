@@ -139,7 +139,7 @@ let getstartedtemplate = async () => {
                 "elements": [{
                     "title": "HCMUE CHÀO BẠN",
                     "subtitle": "DƯỚI ĐÂY LÀ MỘT SỐ TÙY CHỌN HCMUE",
-                    "image_url": 'https://bizweb.dktcdn.net/100/127/787/files/295575282-502817108186499-3820513038597196827-n.jpg?v=1670473477126',
+                    "image_url": 'https://jobtest.vn/hrblog/wp-content/uploads/2022/07/hoc-phi-dai-hoc-su-pham-tphcm-anh-1.jpg',
                     "buttons": [
                         {
                             "type": "postback",
