@@ -116,8 +116,8 @@ let hendlegetstarted = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
             let username = await getusername(sender_psid);
-            let response1 = { "text": `XIN CHÀO ${username} NHÉ, TỚ LÀ CHATBOT HCMUE RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU` }
-            let response2 = getstartedtemplate();
+            let response1 = await { "text": `XIN CHÀO ${username} NHÉ, TỚ LÀ CHATBOT HCMUE RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU` }
+            let response2 = await getstartedtemplate();
             // send teck masseges
             await callSendAPI(sender_psid, response1)
 
