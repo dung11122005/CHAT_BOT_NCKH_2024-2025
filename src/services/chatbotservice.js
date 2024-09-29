@@ -130,8 +130,8 @@ let hendlegetstarted = (sender_psid) => {
         }
     })
 }
-let getstartedtemplate = () => {
-    let response = {
+let getstartedtemplate = async () => {
+    let response = await {
         "attachment": {
             "type": "template",
             "payload": {
