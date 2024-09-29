@@ -157,7 +157,6 @@ async function handlePostback(sender_psid, received_postback) {
             break;
         case 'BACK_TO_MAIN_MENU':
         case 'MAIN_MENU':
-
             await chatbotservice.hendlesendmainmenu(sender_psid);
             break;
         case 'LUNCH_MENU':
