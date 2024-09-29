@@ -4,7 +4,7 @@ import db from "../models/index"
 import request from "request";
 require('dotenv').config();
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
-const IMAGE_GET_STARTED = 'https://congchungnguyenhue.com/Uploaded/Images/Original/2023/11/29/sptphcm1-16901105564401079438420_2911085949.jpg'
+const IMAGE_GET_STARTED = 'https://jobtest.vn/hrblog/wp-content/uploads/2022/07/hoc-phi-dai-hoc-su-pham-tphcm-anh-1.jpg'
 let callSendAPI = async (sender_psid, response) => {
     // Construct the message body
     let request_body = {
