@@ -19,7 +19,10 @@ let initwebroutes = (app) => {
     //trafficlawscontrollers
     routes.get('/trafficlaws', trafficlawscontrollers.getAlltrafficlaws);
     routes.get('/create-trafficlaws', trafficlawscontrollers.displayCreatetrafficlaws);
-    routes.post('/post-trafficlaws', trafficlawscontrollers.handleCreatetrafficlaws);
+    routes.get('/update-trafficlaws/:id', trafficlawscontrollers.displayUpdatetrafficlaws);
+    routes.post('/post-updateTrafficlaws', trafficlawscontrollers.handleUpdatetrafficlaws);
+    routes.post('/post-deleteTrafficlaws/:id', trafficlawscontrollers.handleDeletetrafficlaws);
+    routes.post('/post-createTrafficlaws', trafficlawscontrollers.handleCreatetrafficlaws);
 
     return app.use("/", routes);
 

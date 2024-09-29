@@ -16,36 +16,50 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </head>
 
 <body>
     <div class="container">
         <div style="text-align: center;">
-            <h1>Create Traffi claws</h1>
+            <h1>Update Traffi claws</h1>
         </div>
-        <form action="/post-createTrafficlaws" method="post">
+        <form action="/post-updateTrafficlaws" method="post">
+
+            <div style="display: none;">
+                <label for="inputEmail4">id</label>
+                <input type="text" class="form-control" name="id" value="<%= Trafficlaws.id %>" required />
+            </div>
+
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <label for="inputEmail4">Mục đích của câu hỏi</label>
                     <input type="text" class="form-control" name="purpose" placeholder="Mục đích của câu hỏi"
-                        required />
+                        value="<%= Trafficlaws.purpose %>" required />
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputAddress">Câu trả lời 1</label>
-                <textarea class="form-control" name="answer_01" rows="3" required></textarea>
+                <textarea id="01" class="form-control" name="answer_01" rows="3" required></textarea>
             </div>
             <div class="form-group">
                 <label for="inputAddress">Câu trả lời 2</label>
-                <textarea class="form-control" name="answer_02" rows="3"></textarea>
+                <textarea id="02" class="form-control" name="answer_02" rows="3"></textarea>
             </div>
             <div class="form-group">
                 <label for="inputAddress">Câu trả lời 3</label>
-                <textarea class="form-control" name="answer_03" rows="3"></textarea>
+                <textarea id="03" class="form-control" name="answer_03" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Tạo mới</button>
+            <button type="submit" class="btn btn-warning">Cập nhật</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById("01").value = "<%= Trafficlaws.answer_01 %>";
+        document.getElementById("02").value = "<%= Trafficlaws.answer_02 %>";
+        document.getElementById("03").value = "<%= Trafficlaws.answer_03 %>";
+    </script>
 </body>
 
 </html>
