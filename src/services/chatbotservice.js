@@ -310,7 +310,7 @@ let getlunchmenutemplate = () => {
                     }, {
                         "title": "QUAY TRỞ LẠI",
                         "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
-                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "image_url": 'https://tuyensinhmut.edu.vn/wp-content/uploads/2022/09/truong-dai-hoc-su-pham-tphcm-1.jpeg',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -450,34 +450,24 @@ let getditailviewappetizertemplate = () => {
                 "template_type": "generic",
                 "elements": [
                     {
-                        "title": "SÒ HUYẾT TỨ XUYÊN",
-                        "subtitle": "Sò huyết sốt Tứ Xuyên là món ăn khá nổi tiếng và được ưa chuộng bởi hương vị thơm ngon, đậm đà và cay nồng đặc trưng của ẩm thực Tứ Xuyên",
-                        "image_url": 'https://beptruong.edu.vn/wp-content/uploads/2016/01/mon-so-huyet-sot-tu-xuyen.jpg',
+                        "title": "HCMUE KHOA CNTT",
+                        "subtitle": "https://hcmue.edu.vn/vi/khoa-bo-mon/khoa-cntt",
+                        "image_url": 'https://hcmue.edu.vn/images/Faculty_Logos/CNTT.png',
 
                     }, {
-                        "title": "GỎI NGÓ XEN",
-                        "subtitle": "Gỏi ngó sen tôm thịt là món ăn thanh mát, giòn ngon, thích hợp để giải ngán trong những ngày hè nóng bức",
-                        "image_url": 'https://www.unileverfoodsolutions.com.vn/dam/global-ufs/mcos/phvn/vietnam/calcmenu/recipes/VN-recipes/vegetables-&-vegetable-dishes/g%E1%BB%8Fi-ng%C3%B3-sen-t%C3%B4m-th%E1%BB%8Bt/Goi-Ngo-Sen_Web.jpg',
+                        "title": "PAGE KHOA CNTT",
+                        "subtitle": "https://www.facebook.com/FITHCMUE/",
+                        "image_url": 'https://scontent.fsgn5-9.fna.fbcdn.net/v/t1.6435-1/197112880_157116983105233_7668388981866602039_n.jpg?stp=dst-jpg_s200x200&_nc_cat=105&ccb=1-7&_nc_sid=616b0e&_nc_ohc=dOBWbFD6htUQ7kNvgHrDyrr&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=APZqXEcof2vrCXFeGUFRe_s&oh=00_AYCztEmMjuMEcB2IgoCJTaBzV1le4nbRV9DYzCv1Fohisg&oe=6721A8BC',
 
                     }, {
-                        "title": "GỎI CỦ HỦ DỪA",
-                        "subtitle": "Gỏi củ hủ dừa là món ăn thanh mát, giòn ngon, thích hợp cho những ngày hè nóng bức",
-                        "image_url": 'https://amthuc10phut.vn/wp-content/uploads/2022/11/goi-cu-hu-dua-tom-thit.jpg',
-
-                    }, {
-                        "title": "CÀNG CUA BÁCH HOA",
-                        "subtitle": "Món ăn này có hương vị thơm ngon, hấp dẫn và cách bày trí bắt mắt, mang đến sự sang trọng cho mâm cỗ",
-                        "image_url": 'https://monngonmoingay.com/wp-content/uploads/2015/08/IMG-4078-cang-cua-bach-hoa.png',
-
-                    }, {
-                        "title": "SƯỜN KINH ĐÔ",
-                        "subtitle": "Sườn Kinh Đô là món ăn độc đáo với hương vị thơm ngon, đậm đà, mang đậm dấu ấn của ẩm thực Trung Hoa",
-                        "image_url": 'https://haithuycatering.com/image/5c14717b51046d1d87e6fc36/thumbnail.jpg',
+                        "title": "PAGE THÔNG TIN ĐOÀN HỘI CNTT",
+                        "subtitle": "https://www.facebook.com/doanhoicntt.hcmue/?locale=vi_VN",
+                        "image_url": 'https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-1/459545064_1299850701430497_5543728634499576365_n.jpg?stp=dst-jpg_s200x200&_nc_cat=109&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=Aj6GbqL8RkcQ7kNvgGWuk5b&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=AYRvcEg9HqnXqQqadKrs4Md&oh=00_AYCb45ySxVQFvdHn_O5H4FeNZss_IdxBsqOuHYyz5u2U-g&oe=67001009',
 
                     }, {
                         "title": "QUAY TRỞ LẠI",
-                        "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
-                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "subtitle": "QUAY TRỞ LẠI TRANG CHÍNH",
+                        "image_url": 'https://tuyensinhmut.edu.vn/wp-content/uploads/2022/09/truong-dai-hoc-su-pham-tphcm-1.jpeg',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -546,7 +536,7 @@ let getditailviewdishistemplate = () => {
                     }, {
                         "title": "QUAY TRỞ LẠI",
                         "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
-                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "image_url": 'https://tuyensinhmut.edu.vn/wp-content/uploads/2022/09/truong-dai-hoc-su-pham-tphcm-1.jpeg',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -615,7 +605,7 @@ let getditailviewdessertstemplate = () => {
                     }, {
                         "title": "QUAY TRỞ LẠI",
                         "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
-                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "image_url": 'https://tuyensinhmut.edu.vn/wp-content/uploads/2022/09/truong-dai-hoc-su-pham-tphcm-1.jpeg',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -678,7 +668,7 @@ let getditailviewdrinkstemplate = () => {
                     }, {
                         "title": "QUAY TRỞ LẠI",
                         "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
-                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "image_url": 'https://tuyensinhmut.edu.vn/wp-content/uploads/2022/09/truong-dai-hoc-su-pham-tphcm-1.jpeg',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -724,7 +714,7 @@ let getditailviewmusictemplate = () => {
                     }, {
                         "title": "QUAY TRỞ LẠI",
                         "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
-                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "image_url": 'https://tuyensinhmut.edu.vn/wp-content/uploads/2022/09/truong-dai-hoc-su-pham-tphcm-1.jpeg',
                         "buttons": [
                             {
                                 "type": "postback",
