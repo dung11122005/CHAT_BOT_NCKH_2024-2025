@@ -264,9 +264,9 @@ let getlunchmenutemplate = () => {
                 "template_type": "generic",
                 "elements": [
                     {
-                        "title": "MÓN KHAI VỊ",
-                        "subtitle": "NHÀ HÀNG CHÚNG TÔI CÓ RẤT NHIỀU MÓN KHAI VỊ HẤP DẪN",
-                        "image_url": 'https://cdn.tgdd.vn/Files/2022/04/04/1423782/goi-y-8-mon-nguoi-khai-vi-cho-nhung-buoi-tiec-hoi-hop-voi-gia-dinh-202204040912057499.jpg',
+                        "title": "CÔNG TÁC CHÍNH TRỊ",
+                        "subtitle": "PHÒNG CÔNG TÁC CHÍNH TRỊ & HỌC SINH SINH VIÊN",
+                        "image_url": 'https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/459276323_885002870275661_8392065913991818974_n.jpg?stp=cp6_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LDrWb7pOBowQ7kNvgFdc-ne&_nc_ht=scontent.fsgn5-12.fna&_nc_gid=AIIr1go3rm28oazFQUI0Rrr&oh=00_AYDWL9kgbQIng3NERu6DInrI5Nr8znGrDtxMkA3ikssekw&oe=66FFEFE9',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -275,36 +275,14 @@ let getlunchmenutemplate = () => {
                             }
                         ],
                     }, {
-                        "title": "MÓN CHÍNH",
-                        "subtitle": "NHÀ HÀNG CHÚNG TÔI CÓ RẤT NHIỀU MÓN ĂN, ĐẶC SẢN TỪNG VÙNG MIỀN",
-                        "image_url": 'https://haithuycatering.com/image/5c16265d51046d5028912183/original.jpg',
+                        "title": "PAGE PHÒNG CTCC & HỌC SINH SINH VIÊN",
+                        "subtitle": "Fanpage dùng để cung cấp thông tin về công tác sinh viên tại Trường Đại học Sư phạm TP. Hồ Chí Minh",
+                        "image_url": 'https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-1/456036919_869074158535199_4201510221674934249_n.jpg?stp=dst-jpg_s200x200&_nc_cat=108&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=02py9k3CNwkQ7kNvgEwKZPn&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=AfGEstJMQQGQU-_JgOnphbi&oh=00_AYBZJ5ouxXWsIXu_r2VDudg6pNJItbKc_KAbpHNdFRb1xg&oe=66FFFF99',
                         "buttons": [
                             {
                                 "type": "postback",
                                 "title": "XEM CHI TIẾT",
                                 "payload": "MAIN_DISHIS_MENU",
-                            }
-                        ],
-                    }, {
-                        "title": "MÓN TRÁNG MIỆNG",
-                        "subtitle": "MÓN TRÁNG MIỆNG CỦA NHÀ HÀNG CHÚNG TÔI SẼ LÀM CHO QUÝ KHÁCH HÀI LÒNG",
-                        "image_url": 'https://suckhoedoisong.qltns.mediacdn.vn/Images/phamhiep/2016/08/09/1_11.jpg',
-                        "buttons": [
-                            {
-                                "type": "postback",
-                                "title": "XEM CHI TIẾT",
-                                "payload": "DESSERTS_MENU",
-                            }
-                        ],
-                    }, {
-                        "title": "ĐỒ UỐNG",
-                        "subtitle": "THỨC UỐNG CỦA NHÀ HÀNG CHÚNG TÔI RẤT PHONG PHÚ VÀ NGON MIỆNG",
-                        "image_url": 'https://vus.edu.vn/wp-content/uploads/2023/12/do-uong-tieng-anh.jpg',
-                        "buttons": [
-                            {
-                                "type": "postback",
-                                "title": "XEM CHI TIẾT",
-                                "payload": "DRINKS_MENU",
                             }
                         ],
                     }, {
