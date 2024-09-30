@@ -271,7 +271,7 @@ let getlunchmenutemplate = () => {
                             {
                                 "type": "postback",
                                 "title": "XEM CHI TIẾT",
-                                "payload": "APPETIZER_MENU",
+                                "payload": "CTCC_MENU",
                             }
                         ],
                     }, {
@@ -282,7 +282,7 @@ let getlunchmenutemplate = () => {
                             {
                                 "type": "postback",
                                 "title": "XEM CHI TIẾT",
-                                "payload": "MAIN_DISHIS_MENU",
+                                "payload": "PAGE_CTCC_MENU",
                             }
                         ],
                     }, {
