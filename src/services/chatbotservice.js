@@ -209,7 +209,7 @@ let getmainmenutemplate = () => {
                     }, {
                         "title": "THÔNG TIN TUYỂN SINH",
                         "subtitle": "HCMUE là ngôi trường đào tạo giáo viên tốt nhất phía nam",
-                        "image_url": 'https://unizone.edu.vn/wp-content/uploads/2021/09/khu-tu-hoc-dai-hoc-su-pham-tphcm.jpg',
+                        "image_url": 'https://govolunteer.hcmue.edu.vn/storage/uploads/2022/06/02/DSzECe17DUGzsAWtD9OGKUGfYMO4T0UVK9AsZTq5.jpg',
                         "buttons": [
                             {
                                 "type": "web_url",
@@ -352,9 +352,9 @@ let getdinnermenutemplate = () => {
                 "template_type": "generic",
                 "elements": [
                     {
-                        "title": "MÓN KHAI VỊ",
-                        "subtitle": "NHÀ HÀNG CHÚNG TÔI CÓ RẤT NHIỀU MÓN KHAI VỊ HẤP DẪN",
-                        "image_url": 'https://cdn.tgdd.vn/Files/2022/04/04/1423782/goi-y-8-mon-nguoi-khai-vi-cho-nhung-buoi-tiec-hoi-hop-voi-gia-dinh-202204040912057499.jpg',
+                        "title": "KHOA CÔNG NGHỆ THÔNG TIN",
+                        "subtitle": "NĂNG ĐỘNG - HIỆN ĐẠI - SÁNG TẠO",
+                        "image_url": 'https://hcmue.edu.vn/images/Faculty_Logos/CNTT.png',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -363,9 +363,9 @@ let getdinnermenutemplate = () => {
                             }
                         ],
                     }, {
-                        "title": "MÓN CHÍNH",
-                        "subtitle": "NHÀ HÀNG CHÚNG TÔI CÓ RẤT NHIỀU MÓN ĂN, ĐẶC SẢN TỪNG VÙNG MIỀN",
-                        "image_url": 'https://haithuycatering.com/image/5c16265d51046d5028912183/original.jpg',
+                        "title": "KHOA GIÁO DỤC TIỂU HỌC",
+                        "subtitle": "TẤT CẢ VÌ SỰ NGHIỆP GIÁO DỤC",
+                        "image_url": 'https://hcmue.edu.vn/images/Faculty_Logos/TH.png',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -374,9 +374,9 @@ let getdinnermenutemplate = () => {
                             }
                         ],
                     }, {
-                        "title": "MÓN TRÁNG MIỆNG",
-                        "subtitle": "MÓN TRÁNG MIỆNG CỦA NHÀ HÀNG CHÚNG TÔI SẼ LÀM CHO QUÝ KHÁCH HÀI LÒNG",
-                        "image_url": 'https://suckhoedoisong.qltns.mediacdn.vn/Images/phamhiep/2016/08/09/1_11.jpg',
+                        "title": "KHOA TOÁN - TIN HỌC",
+                        "subtitle": "CHẤT LƯỢNG – HỘI NHẬP – PHÁT TRIỂN",
+                        "image_url": 'https://hcmue.edu.vn/images/Faculty_Logos/Toan1.png',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -385,9 +385,9 @@ let getdinnermenutemplate = () => {
                             }
                         ],
                     }, {
-                        "title": "ĐỒ UỐNG",
-                        "subtitle": "THỨC UỐNG CỦA NHÀ HÀNG CHÚNG TÔI RẤT PHONG PHÚ VÀ NGON MIỆNG",
-                        "image_url": 'https://vus.edu.vn/wp-content/uploads/2023/12/do-uong-tieng-anh.jpg',
+                        "title": "KHOA NGỮ VĂN",
+                        "subtitle": "SÁNG TẠO - NHÂN VĂN - THỰC TIỄN",
+                        "image_url": 'https://hcmue.edu.vn/images/Faculty_Logos/van.png',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -396,9 +396,9 @@ let getdinnermenutemplate = () => {
                             }
                         ],
                     }, {
-                        "title": "ĐÊM ÂM NHẠC",
-                        "subtitle": "ÂM NHẠC LÀ LIỀU THUỐC CHỮA LÀNH MỌI VẾT THƯƠNG",
-                        "image_url": 'https://bazaarvietnam.vn/wp-content/uploads/2022/06/Harpers-Bazaar-san-khau-ca-nhac-ta%CC%A3i-Da-Lat_LULULOLA_03-scaled.jpg',
+                        "title": "KHOA LỊCH SỬ",
+                        "subtitle": "BIẾT QUÁ KHỨ - HIỂU HIỆN TẠI - XÂY ĐẮP TƯƠNG LAI",
+                        "image_url": 'https://hcmue.edu.vn/images/Faculty_Logos/SU.png',
                         "buttons": [
                             {
                                 "type": "postback",
@@ -408,8 +408,8 @@ let getdinnermenutemplate = () => {
                         ],
                     }, {
                         "title": "QUAY TRỞ LẠI",
-                        "subtitle": "QUAY TRỞ LẠI MENU CHÍNH",
-                        "image_url": 'https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/lentkdau/mauthietkenhahangdep/9.jpg',
+                        "subtitle": "QUAY TRỞ LẠI TRANG CHÍNH",
+                        "image_url": 'https://tuyensinhmut.edu.vn/wp-content/uploads/2022/09/truong-dai-hoc-su-pham-tphcm-1.jpeg',
                         "buttons": [
                             {
                                 "type": "postback",
