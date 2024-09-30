@@ -509,29 +509,14 @@ let getditailviewdishistemplate = () => {
                 "template_type": "generic",
                 "elements": [
                     {
-                        "title": "CÁ LÓC HẤP BẦU",
-                        "subtitle": "Cá lóc hấp bầu là món ăn dân dã, thanh mát, bổ dưỡng và được nhiều người yêu thích",
-                        "image_url": 'https://pastaxi-manager.onepas.vn/content/uploads/articles/huanphan/quan-an-ngon/ca-loc-hap-bau-quan-an-ngon-1.jpg',
+                        "title": "HCMUE KHOA GDTH",
+                        "subtitle": "https://hcmue.edu.vn/vi/khoa-bo-mon/khoa-gdth",
+                        "image_url": 'https://hcmue.edu.vn/images/Faculty_Logos/TH.png',
 
                     }, {
-                        "title": "TÔM NƯỚNG PHOMAI",
-                        "subtitle": "Tôm nướng phô mai là món ăn thơm ngon, béo ngậy, hấp dẫn được nhiều người yêu thích",
-                        "image_url": 'https://i-giadinh.vnecdn.net/2022/12/24/Buoc-6-Thanh-pham-6-3320-1671873498.jpg',
-
-                    }, {
-                        "title": "HEO RỪNG 7 MÓN",
-                        "subtitle": "Heo rừng là thực phẩm quý hiếm, được nhiều người yêu thích bởi hương vị thơm ngon, bổ dưỡng",
-                        "image_url": 'https://vietpho.com.vn/public/uploads/files/Tin%20Tuc/z4285777440778_d6fb69b018eb0649da2ca45f8f1a1d90.jpg',
-
-                    }, {
-                        "title": "GÀ NƯỚNG LU",
-                        "subtitle": "Món ăn này được chế biến bằng cách nướng gà nguyên con trong lu đất, tạo nên hương vị đặc trưng",
-                        "image_url": 'https://chumrestaurant.com/wp-content/uploads/2021/11/Ga-nuong-lu-500x500-1.jpg',
-
-                    }, {
-                        "title": "LẨU CUA ĐỒNG",
-                        "subtitle": "Lẩu cua đồng là món ăn dân dã, quen thuộc trong mâm cơm của người Việt Nam, đặc biệt là vào những ngày se lạnh",
-                        "image_url": 'https://gasbanmai.com/wp-content/uploads/2023/05/lau-cua-dong.jpg',
+                        "title": "PAGE CỔNG THÔNG TIN KHOA GDTH",
+                        "subtitle": "https://www.facebook.com/congthongtinkhoagdth/",
+                        "image_url": 'https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-1/456705553_973468437911911_8619797593824065497_n.jpg?stp=dst-jpg_s200x200&_nc_cat=111&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=8yhTQJJvY8sQ7kNvgF2h18W&_nc_ht=scontent.fsgn5-15.fna&oh=00_AYDEUb70EmId0DmDPrJN8PffwmyJjNbVJ4-KDkZ8QmhGRQ&oe=67000C7B',
 
                     }, {
                         "title": "QUAY TRỞ LẠI",
