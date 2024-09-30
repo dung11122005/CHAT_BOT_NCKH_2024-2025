@@ -209,7 +209,7 @@ let getmainmenutemplate = () => {
                     }, {
                         "title": "THÔNG TIN TUYỂN SINH",
                         "subtitle": "HCMUE là ngôi trường đào tạo giáo viên tốt nhất phía nam",
-                        "image_url": 'https://govolunteer.hcmue.edu.vn/storage/uploads/2022/06/02/DSzECe17DUGzsAWtD9OGKUGfYMO4T0UVK9AsZTq5.jpg',
+                        "image_url": 'https://cdn.tuoitre.vn/471584752817336320/2024/7/10/screenshot20240710-185451gallery-17206125470211857750614.jpg',
                         "buttons": [
                             {
                                 "type": "web_url",
