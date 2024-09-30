@@ -148,7 +148,7 @@ let getstartedtemplate = async () => {
                         },
                         {
                             "type": "web_url",
-                            "url": `https://online.hcmue.edu.vn`,
+                            "url": `${process.env.URL_WEB_TUYEN_SINH}`,
                             "title": "HCMUE ONLINE",
                             "webview_height_ratio": "tall",
                             "messenger_extensions": true //false : open the webview in new tab
