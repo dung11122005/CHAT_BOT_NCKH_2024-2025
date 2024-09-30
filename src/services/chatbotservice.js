@@ -496,7 +496,7 @@ let getditailviewroomCTCCtemplate = () => {
                     }, {
                         "title": "HỖ TRỢ SINH VIÊN",
                         "subtitle": "https://www.facebook.com/doanhoicntt.hcmue/?locale=vi_VN",
-                        "image_url": 'https://unizone.edu.vn/wp-content/uploads/2021/09/tot-nghiep-dai-hoc-su-pham-tp-hcm.jpg',
+                        "image_url": 'https://scontent.fsgn5-5.fna.fbcdn.net/v/t1.6435-9/116745704_1123555441379245_2652313142206196076_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_ohc=VNhHDX2YXwgQ7kNvgEi_QmA&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=AKgWSVz4Pjz82YQLv4exVSR&oh=00_AYDSXl0gm8ef3_9SI9GZirX0vW83qTNgohxdf6Lr82mWPw&oe=6721AB15',
 
                     }, {
                         "title": "HỌC BỔNG",
@@ -522,6 +522,50 @@ let getditailviewroomCTCCtemplate = () => {
     return response
 }
 
+
+let hendledetailviewpageroomCTCC = (sender_psid) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let response1 = getditailviewpageroomCTCCtemplate();
+            // send teck masseges
+            await callSendAPI(sender_psid, response1)
+
+            resolve('done')
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
+let getditailviewpageroomCTCCtemplate = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [
+                    {
+                        "title": "Phòng CTCT và Học sinh, sinh viên Trường Đại học Sư phạm TP.HCM",
+                        "subtitle": "https://www.facebook.com/phongctct.hcmue/?locale=vi_VN",
+                        "image_url": 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/A_SP_HCMUE.jpg/800px-A_SP_HCMUE.jpg',
+
+                    }, {
+                        "title": "QUAY TRỞ LẠI",
+                        "subtitle": "QUAY TRỞ LẠI TRANG CHÍNH",
+                        "image_url": 'https://tuyensinhmut.edu.vn/wp-content/uploads/2022/09/truong-dai-hoc-su-pham-tphcm-1.jpeg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "QUAY LẠI",
+                                "payload": "BACK_TO_MAIN_MENU",
+                            }
+                        ],
+                    }
+                ]
+            }
+        }
+    }
+    return response
+}
 
 
 
@@ -894,5 +938,6 @@ module.exports = {
     hendleshowdetailroom: hendleshowdetailroom,
     callSendAPI: callSendAPI,
     handleException: handleException,
-    hendledetailviewroomCTCC: hendledetailviewroomCTCC
+    hendledetailviewroomCTCC: hendledetailviewroomCTCC,
+    hendledetailviewpageroomCTCC: hendledetailviewpageroomCTCC
 }
