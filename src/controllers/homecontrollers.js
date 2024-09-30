@@ -181,6 +181,12 @@ async function handlePostback(sender_psid, received_postback) {
         case 'DRINKS_MENU':
             await chatbotservice.hendledetailviewdrinks(sender_psid);
             break;
+        case 'CTCC_MENU':
+            await chatbotservice.hendledetailviewroomCTCC(sender_psid);
+            break;
+        case 'PAGE_CTCC_MENU':
+            await chatbotservice.hendledetailviewappetizer(sender_psid);
+            break;
         case 'MUSIC_MENU':
             await chatbotservice.hendledetailviewmusic(sender_psid);
             break;

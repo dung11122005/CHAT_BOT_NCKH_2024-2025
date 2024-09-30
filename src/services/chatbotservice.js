@@ -463,6 +463,65 @@ let getditailviewappetizertemplate = () => {
 
 
 
+let hendledetailviewroomCTCC = (sender_psid) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let response1 = getditailviewroomCTCCtemplate();
+            // send teck masseges
+            await callSendAPI(sender_psid, response1)
+
+            resolve('done')
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
+let getditailviewroomCTCCtemplate = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [
+                    {
+                        "title": "TIN TỨC - SỰ KIỆN",
+                        "subtitle": "https://ctsv.hcmue.edu.vn/",
+                        "image_url": 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/A_SP_HCMUE.jpg/800px-A_SP_HCMUE.jpg',
+
+                    }, {
+                        "title": "CHÍNH SÁCH SINH VIÊN",
+                        "subtitle": "https://ctsv.hcmue.edu.vn/?top-category=7",
+                        "image_url": 'https://jobtest.vn/hrblog/wp-content/uploads/2022/07/hoc-phi-dai-hoc-su-pham-tphcm-anh-4.jpg',
+
+                    }, {
+                        "title": "HỖ TRỢ SINH VIÊN",
+                        "subtitle": "https://www.facebook.com/doanhoicntt.hcmue/?locale=vi_VN",
+                        "image_url": 'https://unizone.edu.vn/wp-content/uploads/2021/09/tot-nghiep-dai-hoc-su-pham-tp-hcm.jpg',
+
+                    }, {
+                        "title": "HỌC BỔNG",
+                        "subtitle": "https://www.facebook.com/doanhoicntt.hcmue/?locale=vi_VN",
+                        "image_url": 'https://www.vietjack.com/thong-tin-tuyen-sinh/images/truong-dai-hoc-su-pham-tp-ho-chi-minh-179842.PNG',
+
+                    }, {
+                        "title": "QUAY TRỞ LẠI",
+                        "subtitle": "QUAY TRỞ LẠI TRANG CHÍNH",
+                        "image_url": 'https://tuyensinhmut.edu.vn/wp-content/uploads/2022/09/truong-dai-hoc-su-pham-tphcm-1.jpeg',
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "QUAY LẠI",
+                                "payload": "BACK_TO_MAIN_MENU",
+                            }
+                        ],
+                    }
+                ]
+            }
+        }
+    }
+    return response
+}
+
 
 
 
@@ -834,5 +893,6 @@ module.exports = {
     hendledetailviewmusic: hendledetailviewmusic,
     hendleshowdetailroom: hendleshowdetailroom,
     callSendAPI: callSendAPI,
-    handleException: handleException
+    handleException: handleException,
+    hendledetailviewroomCTCC: hendledetailviewroomCTCC
 }
