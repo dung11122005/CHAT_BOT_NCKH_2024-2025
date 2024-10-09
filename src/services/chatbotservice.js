@@ -877,15 +877,20 @@ let handleException = async (senderId, messageText) => {
                     }
                 })
 
-                if (answer != null) {
-                    replyMessage1 = answer.answer_01
-                    replyMessage2 = answer.answer_02
-                    replyMessage3 = answer.answer_03
-                } else {
-                    await db.Unanswereds.create({
-                        question: messageText
-                    })
+                try {
+                    if (answer != null) {
+                        replyMessage1 = answer.answer_01
+                        replyMessage2 = answer.answer_02
+                        replyMessage3 = answer.answer_03
+                    } else {
+                        await db.Unanswereds.create({
+                            question: messageText
+                        })
+                    }
+                } catch (error) {
+
                 }
+
 
 
 
