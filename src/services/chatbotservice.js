@@ -116,7 +116,7 @@ let hendlegetstarted = (sender_psid) => {
     return new Promise(async (resolve, reject) => {
         try {
             let username = await getusername(sender_psid);
-            let response1 = await { "text": `XIN CHÀO ${username} NHÉ, TỚ LÀ CHATBOT HCMUE RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU` }
+            let response1 = await { "text": `XIN CHÀO ${username} NHÉ, TỚ LÀ CHATBOT LUẬT GIAO THÔNG RẤT VUI ĐƯỢC TRÒ CHUYỆN VỚI CẬU` }
             let response2 = await getstartedtemplate();
             // send teck masseges
             await callSendAPI(sender_psid, response1)
@@ -867,7 +867,7 @@ let handleException = async (senderId, messageText) => {
             .then(async data => {
                 const intent = data.intents && data.intents.length > 0 ? data.intents[0].name : null;
                 const confidence = data.intents && data.intents.length > 0 ? data.intents[0].confidence : 0;
-                let replyMessage1 = 'Tôi không hiểu bạn hỏi gì, hoặc câu hỏi không liên quan đến trường Đại Học Sư Phạm TP HCM'
+                let replyMessage1 = 'Tôi không hiểu bạn hỏi gì, hoặc câu hỏi không liên quan đến Luật giao thông'
                 let replyMessage2 = null
                 let replyMessage3 = null
 
