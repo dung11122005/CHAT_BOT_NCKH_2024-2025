@@ -31,7 +31,8 @@ let handleCreatetrafficlaws = (data) => {
                 purpose: data.purpose,
                 answer_01: data.answer_01,
                 answer_02: data.answer_02,
-                answer_03: data.answer_03
+                answer_03: data.answer_03,
+                image: data.image
             })
             resolve({
                 errcode: 0,
@@ -99,6 +100,7 @@ let handleUpdatetrafficlaws = (data, inputId) => {
             dataTrafficlaws.answer_01 = data.answer_01
             dataTrafficlaws.answer_02 = data.answer_02
             dataTrafficlaws.answer_03 = data.answer_03
+            dataTrafficlaws.image = data.image
 
             await dataTrafficlaws.save()
 
