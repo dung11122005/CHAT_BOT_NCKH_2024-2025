@@ -870,6 +870,7 @@ let handleException = async (senderId, messageText) => {
                 let replyMessage1 = 'Tôi không hiểu bạn hỏi gì, hoặc câu hỏi không liên quan đến Luật giao thông'
                 let replyMessage2 = null
                 let replyMessage3 = null
+                let imageUrl = null
 
                 let answer = await db.Trafficlaws.findOne({
                     where: {
@@ -882,6 +883,7 @@ let handleException = async (senderId, messageText) => {
                         replyMessage1 = answer.answer_01
                         replyMessage2 = answer.answer_02
                         replyMessage3 = answer.answer_03
+                        imageUrl = answer.image
                     } else {
                         await db.Unanswereds.create({
                             question: messageText
@@ -897,7 +899,7 @@ let handleException = async (senderId, messageText) => {
                 //console.log('>>>>>>>>>>>>  answer_01', answer_01)
 
                 // Gửi tin nhắn phản hồi lại cho người dùng
-                await sendMessage(senderId, replyMessage1);
+                await sendMessage(senderId, replyMessage1, imageUrl);
                 await sendMessage(senderId, replyMessage2);
                 await sendMessage(senderId, replyMessage3);
             })
@@ -911,7 +913,24 @@ let handleException = async (senderId, messageText) => {
 };
 
 // Gửi tin nhắn phản hồi lại Facebook Messenger
-function sendMessage(senderId, text) {
+function sendMessage(senderId, text, imageUrl = null) {
+
+    // Kiểm tra nếu có hình ảnh, thì gửi ảnh
+    if (imageUrl) {
+        messageData = {
+            recipient: { id: senderId },
+            message: {
+                attachment: {
+                    type: "image",
+                    payload: {
+                        url: imageUrl,
+                        is_reusable: true
+                    }
+                }
+            }
+        };
+    }
+
     fetch(`https://graph.facebook.com/v15.0/me/messages?access_token=${process.env.PAGE_ACCESS_TOKEN}`, {
         method: 'POST',
         headers: {
