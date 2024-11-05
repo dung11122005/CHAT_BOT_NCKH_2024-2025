@@ -900,8 +900,8 @@ let handleException = async (senderId, messageText) => {
 
                 // Gửi tin nhắn phản hồi lại cho người dùng
                 await sendMessage(senderId, replyMessage1, imageUrl);
-                await sendMessage(senderId, replyMessage2);
-                await sendMessage(senderId, replyMessage3);
+                if (replyMessage2) await sendMessage(senderId, replyMessage2);
+                if (replyMessage3) await sendMessage(senderId, replyMessage3);
             })
             .catch(error => {
                 console.error('Error from Wit.ai:', error);
@@ -914,20 +914,33 @@ let handleException = async (senderId, messageText) => {
 
 // Gửi tin nhắn phản hồi lại Facebook Messenger
 function sendMessage(senderId, text, imageUrl = null) {
-
+    let messageData;
     // Kiểm tra nếu có hình ảnh, thì gửi ảnh
+    // Kiểm tra nếu có hình ảnh, thì gửi cả văn bản và hình ảnh
     if (imageUrl) {
         messageData = {
             recipient: { id: senderId },
             message: {
                 attachment: {
-                    type: "image",
+                    type: "template",
                     payload: {
-                        url: imageUrl,
-                        is_reusable: true
+                        template_type: "media",
+                        elements: [
+                            {
+                                media_type: "image",
+                                url: imageUrl
+                            }
+                        ]
                     }
-                }
+                },
+                text: text
             }
+        };
+    } else {
+        // Nếu không có hình ảnh, chỉ gửi tin nhắn văn bản
+        messageData = {
+            recipient: { id: senderId },
+            message: { text: text }
         };
     }
 
@@ -936,10 +949,7 @@ function sendMessage(senderId, text, imageUrl = null) {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-            recipient: { id: senderId },
-            message: { text: text },
-        }),
+        body: JSON.stringify(messageData),
     })
         .then(response => response.json())
         .then(data => {
