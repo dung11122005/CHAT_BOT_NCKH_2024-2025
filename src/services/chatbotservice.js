@@ -870,7 +870,7 @@ let handleException = async (senderId, messageText) => {
                 let replyMessage1 = 'Tôi không hiểu bạn hỏi gì, hoặc câu hỏi không liên quan đến Luật giao thông'
                 let replyMessage2 = null
                 let replyMessage3 = null
-                let imageUrl = null
+                //let imageUrl = null
 
                 let answer = await db.Trafficlaws.findOne({
                     where: {
@@ -883,7 +883,7 @@ let handleException = async (senderId, messageText) => {
                         replyMessage1 = answer.answer_01
                         replyMessage2 = answer.answer_02
                         replyMessage3 = answer.answer_03
-                        imageUrl = answer.image
+                        //imageUrl = answer.image
                     } else {
                         await db.Unanswereds.create({
                             question: messageText
@@ -899,7 +899,7 @@ let handleException = async (senderId, messageText) => {
                 //console.log('>>>>>>>>>>>>  answer_01', answer_01)
 
                 // Gửi tin nhắn phản hồi lại cho người dùng
-                await sendMessage(senderId, replyMessage1, imageUrl);
+                await sendMessage(senderId, replyMessage1);
                 if (replyMessage2) await sendMessage(senderId, replyMessage2);
                 if (replyMessage3) await sendMessage(senderId, replyMessage3);
             })
@@ -913,36 +913,41 @@ let handleException = async (senderId, messageText) => {
 };
 
 // Gửi tin nhắn phản hồi lại Facebook Messenger
-function sendMessage(senderId, text, imageUrl = null) {
+function sendMessage(senderId, text) {
     let messageData;
     // Kiểm tra nếu có hình ảnh, thì gửi ảnh
     // Kiểm tra nếu có hình ảnh, thì gửi cả văn bản và hình ảnh
-    if (imageUrl) {
-        messageData = {
-            recipient: { id: senderId },
-            message: {
-                attachment: {
-                    type: "template",
-                    payload: {
-                        template_type: "media",
-                        elements: [
-                            {
-                                media_type: "image",
-                                url: imageUrl
-                            }
-                        ]
-                    }
-                },
-                text: text
-            }
-        };
-    } else {
-        // Nếu không có hình ảnh, chỉ gửi tin nhắn văn bản
-        messageData = {
-            recipient: { id: senderId },
-            message: { text: text }
-        };
-    }
+    // if (imageUrl) {
+    //     messageData = {
+    //         recipient: { id: senderId },
+    //         message: {
+    //             attachment: {
+    //                 type: "template",
+    //                 payload: {
+    //                     template_type: "media",
+    //                     elements: [
+    //                         {
+    //                             media_type: "image",
+    //                             url: imageUrl
+    //                         }
+    //                     ]
+    //                 }
+    //             },
+    //             text: text
+    //         }
+    //     };
+    // } else {
+    //     // Nếu không có hình ảnh, chỉ gửi tin nhắn văn bản
+    //     messageData = {
+    //         recipient: { id: senderId },
+    //         message: { text: text }
+    //     };
+    // }
+
+    messageData = {
+        recipient: { id: senderId },
+        message: { text: text }
+    };
 
     fetch(`https://graph.facebook.com/v15.0/me/messages?access_token=${process.env.PAGE_ACCESS_TOKEN}`, {
         method: 'POST',
