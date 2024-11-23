@@ -24,6 +24,7 @@ Trả lời những câu hỏi về luật giao thông qua Facebook Messenger
 ## Công nghệ sử dụng
 
 - **Node js (Express)**: Backend framework
+- **EJS (Embedded JavaScript Templates)**: View engine để hiển thị giao diện động từ dữ liệu backend.
 - **Sequelize**: ORM (Object-Relational Mapping) để tương tác với cơ sở dữ liệu một cách dễ dàng và hiệu quả.
 - **Mysql** : Cơ sở dữ liệu chính để lưu trữ dữ liệu.
 - **Supabase**: Dịch vụ cơ sở dữ liệu trên đám mây, được sử dụng để lưu trữ dữ liệu.
