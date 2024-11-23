@@ -31,4 +31,4 @@ Trả lời những câu hỏi về luật giao thông qua Facebook Messenger
 - **Wit.ai**: Công cụ xử lý ngôn ngữ tự nhiên (NLP) dùng để xây dựng chatbot thông minh.
 
 ## Ảnh chụp dự án
-![Supabase](Screenshots/Screenshot 2024-11-24 010101.png)
+![Supabase](https://drive.google.com/file/d/1RbYJlZl1D3ofWgCwFi1AuwO-XCi5OoLC/view?usp=sharing)
