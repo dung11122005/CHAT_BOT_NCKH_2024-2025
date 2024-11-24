@@ -1,27 +1,27 @@
 # CHATBOT HỎI ĐÁP LUẬT GIAO THÔNG
 CHATBOT HỎI ĐÁP LUẬT GIAO THÔNG này là sản phẩm nghiên cứu khoa học của tác giả Hoàng Tấn Dũng và Đoàn Quang Thiệu
 
-## Về tác giả
+## ![Icon](https://img.icons8.com/?size=20&id=21838&format=png&color=000000) Về tác giả
 Mọi thông tin về Tác giả Hoàng Tấn Dũng và Đoàn Quang thiệu, các bạn có thể tìm kiếm tại đây:
 
 Youtube “Hoàng Tấn Dũng” : https://www.youtube.com/@crushoicaucutevai7460/featured
 
 Fanpage “Hoàng Tấn Dũng” : https://www.facebook.com/cotem.khong.90?locale=vi_VN
 
-## Mô tả
+## ![Icon](https://img.icons8.com/?size=20&id=fH22K8x6Yvz6&format=png&color=000000) Mô tả
 Đây là một CHATBOT code bằng ngôn ngữ JavaScript và trả lời người dùng thông qua ứng dụng Facebook Messenger
 
 CHATBOT giúp người dùng trả lời những câu hỏi về luật giao thông
 
 Thuận tiện khi trả lời qua Messenger vì đây là ứng dụng nhắn tin phổ biến nhất ở việt nam
 
-## Tính năng chính
+## ![Icon](https://img.icons8.com/?size=20&id=110196&format=png&color=000000) Tính năng chính
 
 CRUD những câu hỏi về luật giao thông
 
 Trả lời những câu hỏi về luật giao thông qua Facebook Messenger
 
-## ![Icon](https://img.icons8.com/?size=30&id=43259&format=png&color=000000) Công nghệ sử dụng
+## ![Icon](https://img.icons8.com/?size=20&id=43259&format=png&color=000000) Công nghệ sử dụng
 
 - **Node js (Express)**: Backend framework
 - **EJS (Embedded JavaScript Templates)**: View engine để hiển thị giao diện động từ dữ liệu backend.
@@ -31,7 +31,7 @@ Trả lời những câu hỏi về luật giao thông qua Facebook Messenger
 - **Render**: Nền tảng để triển khai (deploy) ứng dụng Node.js.
 - **Wit.ai**: Công cụ xử lý ngôn ngữ tự nhiên (NLP) dùng để xây dựng chatbot thông minh.
 
-## Ảnh chụp dự án
+## ![Icon](https://img.icons8.com/?size=20&id=9YgKo9PXNHu4&format=png&color=000000) Ảnh chụp dự án
 
 ### Supabase
 ![Supabase](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/468202637_122150356172291068_3606852061452380849_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=bsG-G561J_0Q7kNvgHEYH8g&_nc_zt=23&_nc_ht=scontent.fsgn5-5.fna&_nc_gid=A5Xqpfj7bLHl6LMrzmysxZe&oh=00_AYBCWJuKpSE2FLlktsI28m9ELaU8CAHsX-ZkcyzQdZOL9g&oe=6747F222)
