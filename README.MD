@@ -24,11 +24,17 @@ Trả lời những câu hỏi về luật giao thông qua Facebook Messenger
 ## ![Icon](https://img.icons8.com/?size=20&id=43259&format=png&color=000000) Công nghệ sử dụng
 
 - **Node js (Express)**: Backend framework
+
 - **EJS (Embedded JavaScript Templates)**: View engine để hiển thị giao diện động từ dữ liệu backend.
+
 - **Sequelize**: ORM (Object-Relational Mapping) để tương tác với cơ sở dữ liệu một cách dễ dàng và hiệu quả.
+
 - **Mysql** : Cơ sở dữ liệu chính để lưu trữ dữ liệu.
+
 - **Supabase**: Dịch vụ cơ sở dữ liệu trên đám mây, được sử dụng để lưu trữ dữ liệu.
+
 - **Render**: Nền tảng để triển khai (deploy) ứng dụng Node.js.
+
 - **Wit.ai**: Công cụ xử lý ngôn ngữ tự nhiên (NLP) dùng để xây dựng chatbot thông minh.
 
 ## ![Icon](https://img.icons8.com/?size=25&id=9YgKo9PXNHu4&format=png&color=000000) Ảnh chụp dự án
