@@ -21,7 +21,7 @@ CRUD những câu hỏi về luật giao thông
 
 Trả lời những câu hỏi về luật giao thông qua Facebook Messenger
 
-## ![Icon](https://img.icons8.com/?size=100&id=13060&format=png&color=000000) Công nghệ sử dụng
+## ![Icon](https://icons8.com/icon/13060/windows-client) Công nghệ sử dụng
 
 - **Node js (Express)**: Backend framework
 - **EJS (Embedded JavaScript Templates)**: View engine để hiển thị giao diện động từ dữ liệu backend.
