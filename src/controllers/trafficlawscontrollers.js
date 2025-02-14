@@ -69,6 +69,24 @@ let handleUpdatetrafficlaws = async (req, res) => {
     }
 }
 
+
+let displayViewtrafficlaws = async (req, res) => {
+    try {
+
+        let dataTrafficlawsId = await trafficlawsservice.displayViewtrafficlaws(req.params.id)
+
+        if (dataTrafficlawsId.errcode != 0) {
+            res.redirect('/trafficlaws')
+        }
+
+        return res.render('trafficlaws/viewTrafficlaws.ejs', { Trafficlaws: dataTrafficlawsId.data });
+    } catch (error) {
+
+    }
+
+}
+
+
 let handleDeletetrafficlaws = async (req, res) => {
     try {
         let deleteTrafficlaws = await trafficlawsservice.handleDeletetrafficlaws(req.params.id)
@@ -87,5 +105,6 @@ module.exports = {
     handleCreatetrafficlaws: handleCreatetrafficlaws,
     displayUpdatetrafficlaws: displayUpdatetrafficlaws,
     handleUpdatetrafficlaws: handleUpdatetrafficlaws,
+    displayViewtrafficlaws: displayViewtrafficlaws,
     handleDeletetrafficlaws: handleDeletetrafficlaws
 }

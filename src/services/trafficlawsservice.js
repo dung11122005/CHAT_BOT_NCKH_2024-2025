@@ -79,6 +79,38 @@ let displayUpdatetrafficlaws = (inputId) => {
     })
 }
 
+let displayViewtrafficlaws = (inputId) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            if (inputId === null || inputId === 'null') {
+                resolve({
+                    errcode: 1,
+                    errmessage: "id null"
+                })
+            }
+            let data = await db.Trafficlaws.findOne({
+                where: {
+                    id: inputId
+                }
+            })
+
+            if (data === null) {
+                resolve({
+                    errcode: 2,
+                    errmessage: "data null"
+                })
+            }
+            resolve({
+                errcode: 0,
+                errmessage: "create Trafficlaws success",
+                data: data
+            })
+        } catch (e) {
+
+            reject(e)
+        }
+    })
+}
 
 let handleUpdatetrafficlaws = (data, inputId) => {
     return new Promise(async (resolve, reject) => {
@@ -147,5 +179,6 @@ module.exports = {
     handleCreatetrafficlaws: handleCreatetrafficlaws,
     displayUpdatetrafficlaws: displayUpdatetrafficlaws,
     handleUpdatetrafficlaws: handleUpdatetrafficlaws,
+    displayViewtrafficlaws: displayViewtrafficlaws,
     handleDeletetrafficlaws: handleDeletetrafficlaws
 }
