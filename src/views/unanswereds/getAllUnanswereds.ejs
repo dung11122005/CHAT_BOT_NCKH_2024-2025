@@ -53,40 +53,34 @@
 
 <body>
     <div class="container">
-        <h1>Luật giao thông</h1>
+        <h1>Câu hỏi chưa được trả lời</h1>
 
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item active"><a href="/">Dashboard</a></li>
-            <li class="breadcrumb-item active">Traffi claws</li>
+            <li class="breadcrumb-item active">Unanswereds</li>
         </ol>
-        <div class="mb-2">
-            <a class="btn btn-primary" href="/create-trafficlaws">Tạo Thêm câu
-                hỏi</a>
-        </div>
+
         <table id="customers">
             <tr>
                 <th>Id</th>
-                <th>Purpose</th>
+                <th>question</th>
                 <th>Action</th>
             </tr>
 
-            <% listTrafficlaws.forEach(function(trafficlaws){ %> <!--   forEach     -->
+            <% listUnanswereds.forEach(function(Unanswereds){ %> <!--   forEach     -->
                 <tr>
                     <td>
-                        <%= trafficlaws.id %>
+                        <%= Unanswereds.id %>
                     </td>
                     <td>
-                        <a href="/view-trafficlaws/<%= trafficlaws.id %>">
-                            <%= trafficlaws.purpose %>
+                        <a href="/view-Unanswereds/<%= Unanswereds.id %>">
+                            <%= Unanswereds.question %>
                         </a>
 
                     </td>
-                    <td style="width: 150px;">
+                    <td>
                         <div style=" display: flex; gap: 15px;">
-                            <button class="btn btn-warning"><a
-                                    href="/update-trafficlaws/<%= trafficlaws.id %>">EDIT</a></button>
-
-                            <form action="/post-deleteTrafficlaws/<%= trafficlaws.id %>" method="post">
+                            <form action="/post-deleteUnanswereds/<%= Unanswereds.id %>" method="post">
                                 <button class="btn btn-danger">DELETE</button>
                             </form>
                         </div>

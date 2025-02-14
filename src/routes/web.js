@@ -1,6 +1,7 @@
 import express from "express";
 import homecontrollers from "../controllers/homecontrollers";
 import trafficlawscontrollers from "../controllers/trafficlawscontrollers";
+import unansweredsControllers from "../controllers/unansweredsControllers";
 
 let routes = express.Router();
 
@@ -16,7 +17,7 @@ let initwebroutes = (app) => {
     routes.post('/reserve-table-ajax', homecontrollers.handlepostreservetable);
 
 
-    //trafficlawscontrollers
+    //trafficlawsControllers
     routes.get('/trafficlaws', trafficlawscontrollers.getAlltrafficlaws);
     routes.get('/create-trafficlaws', trafficlawscontrollers.displayCreatetrafficlaws);
     routes.get('/update-trafficlaws/:id', trafficlawscontrollers.displayUpdatetrafficlaws);
@@ -24,6 +25,16 @@ let initwebroutes = (app) => {
     routes.post('/post-updateTrafficlaws', trafficlawscontrollers.handleUpdatetrafficlaws);
     routes.post('/post-deleteTrafficlaws/:id', trafficlawscontrollers.handleDeletetrafficlaws);
     routes.post('/post-createTrafficlaws', trafficlawscontrollers.handleCreatetrafficlaws);
+
+
+
+    //UnansweredsControllers
+    routes.get('/unanswereds', unansweredsControllers.getAllUnanswereds);
+    routes.post('/post-deleteUnanswereds/:id', unansweredsControllers.handleDeleteUnanswereds);
+
+
+
+
 
     return app.use("/", routes);
 
