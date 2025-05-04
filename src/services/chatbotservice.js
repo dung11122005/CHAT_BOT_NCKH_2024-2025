@@ -871,7 +871,14 @@ let handleException = async (senderId, messageText) => {
                 let replyMessage2 = null
                 let replyMessage3 = null
                 //let imageUrl = null
-
+// Kiểm tra độ tin cậy của intent
+            if (!intent || confidence < 0.75) {
+                await db.Unanswereds.create({
+                    question: messageText
+                });
+                await sendMessage(senderId, 'Tôi chưa chắc chắn câu hỏi của bạn. Vui lòng hỏi lại cụ thể hơn nhé.');
+                return;
+            }
                 let answer = await db.Trafficlaws.findOne({
                     where: {
                         purpose: intent
